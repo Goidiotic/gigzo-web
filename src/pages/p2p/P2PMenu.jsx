@@ -15,6 +15,9 @@ export default function P2PMenu() {
 
   const navigate = useNavigate();
 
+  const mobile = getMobile();
+  const uid = getUID();
+
   /* ----------------------------------------
      USER DATA (Example)
   ---------------------------------------- */
@@ -62,10 +65,10 @@ export default function P2PMenu() {
             <div className="p2p-profile-info">
 
               <div className="p2p-mobile">
-                {getMobile || "+91 9999999999"}
+                {mobile || "+91 9999999999"}
               </div>
               <div className="p2p-mobile">
-                {getUID || "Your UID"}
+                {uid || "Your UID"}
               </div>
 
               <div className="p2p-wallet-status">
