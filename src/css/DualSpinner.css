@@ -1,0 +1,48 @@
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 140px;
+  height: 140px;
+  transform: rotate(-90deg); /* start arcs from top */
+}
+
+/* Background track */
+.track {
+  fill: none;
+  stroke: #d4d4d4;
+  stroke-width: 8px;
+}
+
+/* Spinner arcs */
+.arc {
+  fill: none;
+  stroke: #f16122;
+  stroke-linecap: round;
+  stroke-width: 8px;
+  stroke-dasharray: 1 251.2; /* start tiny dot */
+  stroke-dashoffset: 0;
+  animation: spin 2s linear infinite, growShrink 2s ease-in-out infinite;
+}
+
+.arc2 {
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+}
+
+/* Rotation */
+@keyframes spin {
+  0%   { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -314.16; }
+}
+
+/* Grow then shrink */
+@keyframes growShrink {
+  0%   { stroke-dasharray: 1 251.2; }   /* tiny */
+  40%  { stroke-dasharray: 80 251.2; }  /* growing */
+  75%  { stroke-dasharray: 80 251.2; }  /* max length */
+  100% { stroke-dasharray: 1 251.2; }   /* shrink back */
+}

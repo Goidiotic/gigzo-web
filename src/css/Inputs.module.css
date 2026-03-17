@@ -1,0 +1,38 @@
+.inputFullWidth {
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    color: black;
+    background: #f1f1f1;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.inputButtonFullWidth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.grayBg {
+    background: #f1f1f1;
+    color: #000000;
+}
+.blackBg {
+    background: #000000;
+    color: #ffffff;
+}
+.primaryBg {
+    background: #00C542;
+    color: black;
+}

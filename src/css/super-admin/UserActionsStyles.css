@@ -1,0 +1,27 @@
+.uaContentContainer {
+    width: 100%;
+    min-height: 10px;
+    padding: 15px;
+}
+.uaActionMenuContainer {
+    margin-top: 10px;
+}
+.uaActionMenuItemCon {
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    background: #f6f6f6;
+    border: solid 1px #eeeeee;
+    border-radius: 5px;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.uaActionMenuText {
+    flex: 1;
+}
+.uaActionMenuIcon {
+    width: 12px;
+    height: 12px;
+    transform: rotate(180deg);
+}

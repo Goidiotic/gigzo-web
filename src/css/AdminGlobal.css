@@ -1,0 +1,538 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.adminPanelInnerContainer {
+    width: 100%;
+    padding: 0 100px;
+    box-sizing: border-box;
+}
+.topNavigationMenuContainer {
+    width: 100%;
+    display: flex;
+    justify-content: 'space-between';
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    background-color: #f0f0f0;
+    padding-left: 100px;
+    padding-right: 100px;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.topNavigationMenuItemHolder {
+    flex: 1;
+    display: flex;
+}
+.menuItemHolder {
+    padding: 5px 10px;
+    color: #4e57cc;
+    border: none;
+    background-color: none;
+    margin-right: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.menuItemHolder:hover {
+    background: #e1e1e1;
+}
+.menuItemHolder.active{
+    background: #e1e1e1;
+}
+.userListContainer {
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin-top: 25px;
+}
+.userListCardContainer{
+    width: 50%;
+    border: solid 1px #cccccc;
+    margin-right: 25px;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.userDetailsCardContainer {
+    width: 50%;
+    border: solid 1px #cccccc;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.searchUserInputContainer {
+    width: 100%;
+    display: flex;
+}
+.searchUserInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: none;
+    border: solid 1px #cccccc;
+}
+.searchButton {
+    padding: 10px 25px;
+    margin-left: 10px;
+    background-color: #4e57cc;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.userListDisplayContainer {
+    width: 100%;
+    display: flex;
+    background: #eeeeee;
+    padding: 10px 10px 10px 10px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.userListDisplayCardBox {
+    flex: 1;
+    font-size: 14px;
+}
+.adminPageContainer {
+    width: 100%;
+    height: calc(100vh - 50px); /* Correct way to subtract */
+    padding-bottom: 60px;
+    border: solid 1px #cccccc;
+    position: fixed;
+    top: 50px; /* Shift down to not overlap top menu */
+    left: 0;
+    overflow-y: auto;
+    z-index: 999;
+    padding: 0px 100px 0 100px;
+    box-sizing: border-box;
+}
+.adminPageContainerBorder {
+    width: 100%;
+    border-left: solid 1px #676767;
+    border-right: solid 1px #676767;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.adminContentDisplayContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: solid 1px #cccccc;
+    box-sizing: border-box;
+    padding: 15px;
+}
+.disputedOrderDetailsContainer {
+    width: 35%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+}
+.disputeDetailsContainer {
+    width: 100%;
+}
+.disputeDetailsSubOrderValue {
+    width: 100%;
+    padding: 10px;
+    background: #eeeeee;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    border: solid 1px #c8c8c8;
+}
+.disputeDetailsTile {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.disputeTileTag {
+    color: #aaaaaa;
+    font-size: 12px;
+}
+.disputeResolutionContainer {
+    width: 65%;
+    height: 550px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row; /* Make sure it's horizontal */
+    box-sizing: border-box;
+    margin-left: 15px;
+    gap: 15px; /* spacing between buyer and seller */
+}
+.disputeBuyerSideContainer {
+    width: 50%; /* Add this */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.disputeSellerSideContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.disputeActionRevert {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background: #4e57cc;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.disputeActionRelease {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background: #000000;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.responseSideHeaderContainer {
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 16px;
+    background: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+.responseContentContainer  {
+    flex: 1;
+    display: flex;
+    overflow-y: auto;
+    padding: 10px;
+    background: #f9f9f9;
+    flex-direction: column;
+    gap: 10px;
+}
+.chatBubble {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+.chatBubble.buyer {
+    align-self: flex-start;
+    background-color: #e1f0ff;
+    color: #333;
+}
+.chatBubble.admin {
+    align-self: flex-end;
+    background-color: #d0f5d8;
+    color: #222;
+}
+/* 3. Input area */
+.responseTextInputContainer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+    box-sizing: border-box;
+}
+.responseInput {
+    flex: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+.responseSendButtonContainer {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background: #4e57cc;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.responseTextInputContainer {
+    width: 100%;
+    display: flex;
+}
+.responseInput {
+    flex: 1;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.reponseSendButtonContainer {
+    padding: 10px;
+    background: #4e57cc;
+    color: #ffffff;
+}
+.tableContainer {
+    width: 100%;
+}
+.tableContainerHeader,
+.tableRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  padding: 12px 16px;
+  align-items: center;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.tableContainerHeader {
+    font-weight: 600;
+    font-size: 14px;
+    background: #d5d5d5;
+}
+
+.tableRow {
+    font-size: 14px;
+    background: #eeeeee;
+    cursor: pointer;
+}
+.tableRow:hover {
+    background: #e4e4e4;
+}
+
+/*Transaction table*/
+.tableTransactionHeader,
+.tableTransactionRow {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 12px 16px;
+    align-items: center;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.tableTransactionHeader {
+    font-weight: 600;
+    font-size: 14px;
+    background: #d5d5d5;
+}
+.tableTransactionRow {
+    font-size: 14px;
+    background: #eeeeee;
+    cursor: pointer;
+}
+.adminUserSearchContainer {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    margin-bottom: 15px;
+}
+.userSearchInput {
+    padding-left: 15px;
+}
+.userSearchButton {
+    padding-left: 15px;
+    padding-right: 15px;
+    background: #4537ff;
+    cursor: pointer;
+}
+.adminUserList {
+    margin-top: 15px;
+}
+.adminUserListContainer {
+    width: 100%;
+    min-height: 10px;
+}
+.adminUserListFilterContainer {
+    width: 100%;
+    display: flex;
+}
+.userListFilterOption {
+    padding: 3px 10px 3px 10px;
+    border-radius: 5px;
+    border: solid 1px #8d8d8d;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 12px;
+}
+.userListFilterOption.active {
+    background: #616bf3;
+}
+.userAction {
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+.userAction.block {
+    background: #ff4242;
+}
+.userAction.suspend {
+    background: #ffd828;
+}
+.userAction.unblock {
+    background: #45ff8c;
+}
+.viewUserProfileContainer {
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+.viewUserProfileCardView {
+    width: 75%;
+    background: #ededed;
+    margin-right: 7.5px;
+    border-radius: 5px;
+    border: solid 1px #9d9d9d;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.viewUserOtherDetailsCardView {
+    width: 25%;
+    background: #ededed;
+    margin-left: 7.5px;
+    border-radius: 5px;
+    border: solid 1px #9d9d9d;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.viewUserProfileDetails {
+    width: 100%;
+    display: flex;
+}
+.viewUserProfileDetailSection{
+    width: 33.3%;
+}
+.viewUserProfileData {
+    margin-bottom: 15px;
+}
+.viewUserDataTag {
+    font-size: 12px;
+    color: #676767;
+}
+.viewUserdata {
+    font-size: 14px;
+    font-weight: 600;
+}
+.userDisplayBalanceContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 15px;
+}
+.userDisplayBalance {
+    width: 50%;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.userDisplayBalance.balance {
+    margin-right: 5px;
+    background: #cdcaff;
+}
+.userDisplayBalance.commission {
+    margin-left: 5px;
+    background: #cdffbd;
+}
+.userDisplayBalanceTag {
+    font-size: 12px;
+    color: #818181;
+}
+.userDisplayBalanceDetails {
+    font-size: 14px;
+    font-weight: 600;
+}
+.userDetailsLinksContainer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.userDetailsViewLink {
+    padding: 5px 10px;
+    background-color: #d4d4d4; /* optional styling */
+    border-radius: 6px;
+    white-space: nowrap; /* prevents the text from wrapping inside individual boxes */
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;  
+}
+.userDetailsViewLink:hover {
+    background: #c2c2c2;
+}
+.userDetailsViewLink.active {
+    background: #4537ff;
+}
+.createCuoponsCodeContainer {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+}
+.cuoponStatisticsContainer,
+.createCuoponCodeSection {
+    border: solid 1px #cccccc;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.createCuoponCodeSection.create {
+width: 40%;
+margin-right: 7.5px;
+}
+.cuoponStatisticsContainer.statistics {
+    width: 60%;
+    margin-left: 7.5px;
+}
+.createCuoponTag {
+    font-size: 14px;
+    color: #000000;
+}
+.createCuoponInput {
+    padding: 5px 10px;
+    width: 150px;
+}
+.createCuoponType {
+    width: 100%;
+    display: flex;
+}
+.createCuoponTypeContainer {
+    display: flex;
+    margin-top: 5px;
+}
+.createCuoponTypeOption {
+    padding: 2px 10px;
+    border: solid 1px #676767;
+    border-radius: 5px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.createCuoponTypeOption.active {
+    background: #b7b7b7;
+}
+.createCuoponButton {
+    padding: 10px 20px;
+    background: #4537ff;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 15px;
+}

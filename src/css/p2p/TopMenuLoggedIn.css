@@ -1,0 +1,122 @@
+.iox-topmenu-wrapper{
+
+    width:100%;
+    border-bottom:1px solid #1e293b;
+    background:rgba(2,6,23,0.9);
+
+}
+
+.iox-topmenu-container{
+
+    max-width:1200px;
+    margin:auto;
+
+    padding:14px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+}
+
+
+/* LOGO */
+
+.iox-topmenu-logo{
+    width:60px;
+    cursor:pointer;
+}
+
+
+/* CENTER MENU */
+
+.iox-topmenu-center{
+
+    display:flex;
+    gap:28px;
+
+    font-size:14px;
+    color:#cbd5f5;
+
+}
+
+.iox-topmenu-center span{
+    cursor:pointer;
+}
+
+.iox-topmenu-center span:hover{
+    color:#22d3ee;
+}
+
+
+/* RIGHT MENU */
+
+.iox-topmenu-right{
+
+    display:flex;
+    gap:12px;
+    align-items:center;
+
+}
+
+.iox-orders-btn{
+
+    padding:7px 14px;
+
+    border-radius:8px;
+    border:none;
+
+    background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+    color:#000;
+
+}
+
+
+/* NOTIFICATION */
+
+.iox-notification-circle{
+
+    width:34px;
+    height:34px;
+
+    border-radius:50%;
+
+    background:#1e293b;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+
+}
+
+.iox-notification-circle:hover{
+    background:#334155;
+}
+
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .iox-topmenu-center {
+        display: none;
+    }
+
+    .iox-orders-btn {
+        display: none;
+    }
+
+}
+
+
+/* SMALL LOGO ON TABLET */
+
+@media (max-width:1024px){
+
+    .iox-topmenu-logo{
+        width:45px;
+    }
+
+}

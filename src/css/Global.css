@@ -1,0 +1,1689 @@
+/* global.css */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 600;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.LogoDesign {
+    width: 120px;
+    height: auto;
+}
+
+.inputLabel {
+    width: 100%;
+    display: block;
+    padding-bottom: 5px;
+}
+.mainRewardCompContainer{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 50px;
+    padding: 16px;
+}
+.mainRewardCompBadgeContainer {
+    width: 100%;
+    display: flex;
+}
+.mainRewardCompBadgeIcon {
+    width: 48px;
+}
+.mainRewardCompContent {
+    flex: 1;
+    padding-left: 16px;
+    box-sizing: border-box;
+}
+.headerCover {
+    width: 100%;
+    height: 50px;
+}
+.topGap {
+    margin-top: 25px;
+}
+.text-color-primary {
+    color: #00C542;
+}
+.text-color-secondary {
+    color: #FF9A0D;
+}
+.font-size-16 {
+    font-size: 16px !important;
+}
+.font-size-18 {
+    font-size: 18px !important;
+}
+.font-size-20 {
+    font-size: 20px !important;
+}
+.font-size-25 {
+    font-size: 25px !important;
+}
+
+.font-weight-600 {
+    font-weight: 600;
+}
+.orderDoubleButtonContainer {
+    display: flex;
+    width: 100%;
+}
+.orderCalcenButtonContainer {
+    width: 35%;
+    padding-right: 8px;
+}
+.orderActionButtonContainer {
+    width: 65%;
+    padding-left: 8px;
+}
+.orderItemDetailsUPIIcon {
+    width: 45px;
+}
+/* Message Component */
+
+.messageWarning {
+    width: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border: solid 1px #ffcb7d;
+    background: #ffe9c7;
+    color: #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+
+.messageSuccess {
+    width: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border: solid 1px #43e180;
+    background: #b1ffcf;
+    color: #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.messageEmpty {
+    width: 100%;
+    min-height: 25px;
+    padding: 10px;
+    border: solid 1px #e7e7e7;
+    background: #fbfbfb;
+    color: #000000;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 25px;
+}
+.messageDissolved {
+    display: none;
+}
+/*Profile Start*/
+
+.prifileContainer {
+    display: flex;
+    width: 100%;
+    min-height: 64px;
+    background: #ffffff;
+    padding: 25px 15px 0 15px;
+    box-sizing: border-box;
+}
+.profileIconContainer {
+    width: 75px;
+    min-height: 60px;
+    background: #ffffff;
+}
+.profileDetailContainer {
+    flex: 1;
+    background: #ffffff;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.profileDefaultIcon {
+    width: 64px;
+    height: 64px;
+}
+.userName01 {
+    display: block;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+}
+.UID01 {
+    display: block;
+    color: rgb(184, 184, 184);
+    font-size: 14px;
+}
+.status01 {
+    display: block;
+    color: #00C542;
+    font-size: 12px;
+}
+.profile-card-view{
+    width: 100%;
+    min-height: 15px;
+    padding: 25px 15px 0 15px;
+    box-sizing: border-box;
+}
+.wallet-card01 {
+    width: 100%;
+    min-height: 100px;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #000000;
+}
+.wallet-card-header01 {
+    width: 100%;
+    display: flex;
+}
+.wallet-card-header-icon {
+    width: 40px;
+    min-height: 40px;
+}
+.wallet-card-header-tag {
+    flex: 1;
+    padding-left: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 600;
+}
+.wallet-icon01 {
+    width: 36px;
+    height: auto;
+}
+.wallet-balance-container01 {
+    width: 100%;
+    min-height: 10px;
+    display: flex;
+    margin-top: 15px;
+}
+
+.wallet-balance01 {
+    width: 150px;
+    min-height: 10px;
+}
+.wallet-earning-balance01 {
+    flex: 1;
+}
+.balanceTagContainer01 {
+    width: 100%;
+    display: flex;
+}
+.balanceTag {
+    font-size: 16px;
+    font-weight: 600;
+}
+/*
+Dashboard
+*/
+.dashboardSliderContainer {
+    width: 100%;
+    min-height: 150px;
+}
+.dashboardContainer {
+    width: 100%;
+    min-height: 50px;
+    box-sizing: border-box;
+}
+.dashboardHeaderContainer {
+    width: 100%;
+    height: 50px;
+    border-bottom: solid 1px #f0f0f0;
+    display: flex;
+    padding: 10px 15px 10px 15px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.dashboardLogoContainer {
+    display: flex;
+    align-items: center;
+}
+.dashboardWalletContainer {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+.dashboardWalletCard {
+    border: solid 1px #dfdfdf;
+    border-radius: 5px;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.dashboardAppNameContainer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 7.5px;
+}
+.dashboardLogo {
+    width: 50px;
+}
+.tokenNameTag01 {
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: #00C542;
+    box-sizing: border-box;
+    padding-left: 5px;
+    margin-top: -2px;
+}
+.wallet-details-tag01 {
+    font-size: 14px;
+    font-weight: 300;
+    color: #c6c6c6;
+}
+
+.wallet-sellbutton-container01 {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+}
+.wallet-selltoken-button {
+    width: 150px;
+    height: 40px;
+    background: #00C542;
+    color: black;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wallet-selltoken-button:hover {
+    cursor: pointer;
+}
+.profile-menu-card-view01 {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: #f5f5f5;
+    border-radius: 5px;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.profile-menu-icon {
+    width: 48px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.profile-menu-name {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.profile-menu-right-arrow {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.profile-menu-icon-img {
+    width: 36px;
+}
+
+.profile-menu-right-arrow-icon {
+    width: 18px;
+    height: 18px;
+}
+.sell-wallet01-container {
+    width: 100%;
+    min-height: 10px;
+    box-sizing: border-box;
+}
+.sell-wallet01 {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    padding: 25px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f5f5f5;
+    background: #000000;
+}
+.sell-wallet01-tag {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #d4d4d4;
+    font-size: 14px;
+}
+.sell-wallet01-balance {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: right;
+    align-items: center;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+}
+.sell-input-container {
+    width: 100%;
+    min-height: 200px;
+    padding: 0 25px 25px 25px;
+    box-sizing: border-box;
+}
+.sell-input-sub-container {
+    width: 100%;
+    min-height: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    border: solid 1px #f5f5f5;
+}
+.sell-input-reward-container {
+    width: 100%;
+    min-height: 100px;
+    background: #ffffff;
+    border-radius: 10px 10px 0 0;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.sell-inputs-display-container {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.sell-input-button-container {
+    width: 100%;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+
+/*Collection Method Page*/
+.collection-method-items-container {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 25px;
+    padding: 25px 25px 0 25px;
+    box-sizing: border-box;
+}
+.collection-method-item-tag {
+    width: 100%;
+    min-height: 100px;
+}
+
+/* Add Payment Method */
+.add-upi-container {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+.add-upi-inner-container {
+    width: 100%;
+}
+.add-upi-input-container{
+    width: 100%;
+    min-height: 100px;
+    padding: 0 25px 0 25px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+
+/*Market*/
+.market-page-header-container {
+    width: 100%;
+    height: 60px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+.market-page-name-tag {
+    flex: 1;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.market-page-price-tag-container {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+.market-page-trend-icon {
+    padding-right: 15px;
+}
+.market-page-trend-icon img{
+    width: 25px;
+}
+.market-watchlist-container {
+    width: 100%;
+    padding: 0 15px 0 15px;
+    box-sizing: border-box;
+}
+.market-page-watch-list-tag {
+    font-size: 14px;
+    font-weight: 600;
+    display: block;
+    flex: 1;
+}
+.market-watchlist-tag {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.ad-refresh-container {
+    display: flex;
+    justify-content: right;
+    border: solid 1px #cacaca;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+    align-items: center;
+    font-size: 14px;
+    background: #f9f9f9;
+}
+
+/* Order Details Page */
+.OrderDetailsContainer {
+    width: 100%;
+    min-height: 25px;
+    padding: 25px;
+    box-sizing: border-box;
+    margin-top: 60px;
+}
+.orderDetailsCardView {
+    width: 100%;
+    min-height: 50px;
+    background: #fafafa;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid 1px #eeeeee;
+}
+.orderItemDetailsContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.orderItemDetailsTag {
+    flex: 1;
+    font-size: 14px;
+}
+.orderItemDetailsTag2 {
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    font-weight: 600;
+}
+.orderItemDetailsTag3 {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+    font-weight: 600;
+}
+.orderDetailsStatusMessage {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.orderDetailsStatusMessage.pending {
+    color: #2457ff;
+    background: #ecf0ff;
+    border: solid 1px #97b0ff;
+}
+.orderDetailsStatusMessage.timeout {
+    color: #ff5b24;
+    background: #fff0ea;
+    border: solid 1px #ffb095;
+}
+.orderDetailsStatusMessage.disputed {
+    color: #ffc800;
+    background: #fff8e1;
+    border: solid 1px #ffeba2;
+}
+/*Contract Page*/
+.contractListContainer {
+    width: 100%;
+    min-height: 100px;
+}
+.contractPageHeaderContainer {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px #fafafa;
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+.contractPageHeaderNameTag {
+    font-size: 16px;
+    font-weight: 600;
+    color: black;
+}
+.contractPageContentContainer {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 100px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.BuyerPaymentDetailsContainer {
+    width: 100%;
+    min-height: 100px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.BuyerOrderDetailsComContainer {
+    display: flex;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+.BuyerOrderDetailsComLeft {
+    display: flex;
+    width: 50%;
+    justify-content: left;
+    align-items: center;
+    font-size: 14px;
+}
+.BuyerOrderDetailsComRight {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+    align-items: center;
+    font-size: 14px;
+}
+.buyerOrderTimeOut {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff1818;
+}
+.BuyerOrderDetailsContainer {
+    width: 100%;
+    min-height: 15px;
+    background: #fafafa;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.buyerQRCodeDisplayContainer {
+    width: 100%;
+    min-height: 150px;
+    background-color: #fafafa;
+    border-radius: 5px;
+    border:  solid 1px #eeeeee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.buyerQRCodeDisplayTag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+.buyerQRCodeDisplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buyerQRCode {
+    width: 180px;
+    height: auto;
+    border: solid 1px #eeeeee;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.buyerOrderDetailsInputContainer {
+    width: 100%;
+    padding-top: 25px;
+    box-sizing: border-box;
+}
+.buyerOrderNoteContainer {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/*Note Content*/
+.noteContainer {
+    width: 100%;
+    min-height: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-top: 25px;
+}
+.noteHeading {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.notePoints {
+    font-size: 14px;
+    color: #FF9A0D;
+    margin-bottom: 10px;
+}
+/*Buyer Contract*/
+.buyContractTimeOutContainer {
+    width: 100%;
+    min-height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+}
+.buyContractTimeOutStatusContainer {
+    width: 100%;
+    display: flex;
+}
+.buyOrderContractStatusMessageContainer {
+    width: 100%;
+    font-size: 14px;
+    color: #ffffff;
+}
+.contractStatusCardViewContainer {
+    width: 100%;
+    min-height: 75px;
+    border-radius: 5px;
+}
+.contractStatusCardViewMessage {
+    width: 100%;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.contractStatusCardViewMessageIcon img {
+    width: 25px;
+}
+.contractStatusCardViewMessageTag {
+    flex: 1;
+    display: flex;
+    padding-left: 10px;
+    padding-top: 2px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.cardViewAwaiting {
+    background: #5088ff;
+}
+.cardViewConfirming {
+    background: #43e180;
+}
+.cardViewCompleted {
+    background: #43e180;
+}
+
+/*Seller Confrim Order*/
+.SellerConfrimOrderContentContainer {
+    width: 100%;
+    min-height: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+.SellerConfirmOrderDetailsContainer {
+    width: 100%;
+    height: 40px;
+    background: #fafafa;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+}
+
+/*Dashboard*/
+.dashboardChildContractContainer {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+/*Profile and Edit Profile*/
+.profilePageTopCardView {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.profilePhotoCardView {
+    display: flex;
+    width: 100%;
+    min-height: 100px;
+    background: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.profileCardViewLeftUserPhoto {
+    width: 75px;
+    border-right: solid 1px #3a3a3a;
+}
+.profileCardViewLeftUserDetails {
+    flex: 1;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.profileMainTag {
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #ffffff;
+}
+.profileSubTag {
+    margin-bottom: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #b3b3b3;
+}
+.profileEditButton {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.buttonProfileEdit {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+}
+.buttonEditDetailsTag {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+.editButton01 {
+    background: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+}
+
+/*Direct Sell*/
+.direct-sell-details-container {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.direct-sell-details-sub-container {
+    width: 100%;
+    min-height: 100px;
+    box-sizing: border-box;
+    background: #fafafa;
+    border-radius: 5px;
+    border:  solid 1px #ffcb83;
+}
+.direct-sell-details-sub-container-header {
+    width: 100%;
+    min-height: 50px;
+    background: #ececec;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.direct-sell-details-sub-container-content {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    box-sizing: border-box;
+}
+.direct-sell-timer-container {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.direct-sell-details-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.direct-sell-details-left-tag {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #505050;
+    
+}
+.direct-sell-details-right-tag {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+.direct-sell-details-action-button-container {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 25px;
+    display: flex;
+}
+.direct-sell-details-action-button-left {
+    width: 50%;
+    margin-right: 8px;
+}
+.direct-sell-details-action-button-right {
+    width: 50%;
+    margin-left: 8px;
+}
+.direct-sell-sell-ad-status-container {
+    width: 100%;
+    background: #ffcb83;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+}
+.direct-sell-ad-status-sub-container-left {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    box-sizing: border-box;
+}
+.direct-sell-ad-status-sub-container-right {
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 15px;
+    box-sizing: border-box;
+}
+
+/*Order status*/
+.order-status-icon-container {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 25px;
+}
+
+.transactions-container {
+    width: 100%;
+    min-height: 100px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+.transactions-sub-container {
+    width: 100%;
+    min-height: 100px;
+}
+/*
+Global Card Properties
+*/
+.global-card-container {
+    width: 100%;
+    min-height: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.global-inner-card-container {
+    width: 100%;
+    min-height: 10px;   
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.gic-border {
+    border: solid 1px #eeeeee;
+}
+.gic2-border {
+    border: solid 1px #e3edff;
+}
+/*
+gcb = global card background
+llg = light-light-grey
+llg2 = light-light-green
+*/
+.gcb-llg {
+    background: #f8f8f8;
+}
+.gcb-llg2 {
+    background: #f8f8f8;
+    color: #505050;
+}
+/*
+Global Card Properties 
+*/
+
+.chooseImage1 {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    font-size: 14px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.addERupeeAccount {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    border: solid 1px #eeeeee;
+    padding: 4px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+.eRupeeIconContainer {
+    display: flex;
+    width: 60px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+    background: #fff4c4;
+    border-radius: 5px;
+}
+.eRupeeAddButtonContainer {
+   display: flex;
+   align-items: center;
+   padding-left: 15px;
+   color: #5088ff;
+   font-weight: bold;
+   font-size: 14px;
+}
+.eRupeeIcon1 {
+    width: 40px;
+}
+.eRupeeAccountCard {
+    width: 100%;
+    min-height: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.eRupeeAccountDisplayContainer {
+    width: 100%;
+    display: flex;
+}
+.eRupeeAccountDisplayDetails {
+    flex: 1;
+}
+.eRupeeAccountBankNameDisplay {
+    width: 65px;
+    height: 45px;
+}
+/*
+Create ad
+*/
+.adInformationContainer {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+}
+.adInformationLeftContainer {
+    width: 50%;
+    align-content: start;
+    color: #3a3a3a;
+    font-size: 14px;
+}
+.adInformationRightContainer {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+/*
+My Ads
+*/
+
+/*
+Place Ad
+*/
+.placeOrderCardView {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #e9e9e9;
+    padding: 15px;
+    box-sizing: border-box;
+    color: #686868;
+}
+.placeOrderLimitCon {
+    width: 100%;
+    display: flex;
+}
+.placeOrderMinLimit {
+    width: 50%;
+    margin-right: 12.5px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FF9A0D;
+    cursor: pointer;
+}
+.placeOrderMaxLimit {
+    width: 50%;
+    margin-left: 12.5px;
+    display: flex;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #FF9A0D;
+    cursor: pointer;
+}
+.placeOrderPaymentMethod {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border-top: solid 1px #e9e9e9;
+    border-right: solid 1px #e9e9e9;
+    border-bottom: solid 1px #e9e9e9;
+    border-left: solid 3px #FF9A0D;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.placeOrderButtonContainer {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+}
+.placeOrderBUttonCancelContainer {
+    width: 35%;
+    margin-right: 12.5px;
+}
+.placeOrderBUttonPlaceOrderContainer {
+    width: 65%;
+}
+/*
+Popup Message Start
+*/
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.popup-card {
+    background-color: #fff;
+    padding: 24px 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.popup-card button {
+    margin-top: 15px;
+    background-color: #00C542;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/*
+Horizontal filter
+*/
+.statusFilter {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.orderTypeFilter::-webkit-scrollbar,
+.statusFilter::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.statusOption {
+    padding: 3px 10px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+}
+
+.typeOption.active {
+  background-color: #00C542;
+  color: #fff;
+}
+.statusOption.active {
+    background-color: #00C542;
+    color: #fff;
+}
+
+.filterHolderContainer {
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+}
+.orderTypeOptionContainer {
+    width: 100%;
+    display: flex;
+    background-color: #f6f6f6;
+    border-radius: 50px;
+    box-sizing: border-box;
+}
+.orderTypeBuy {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.orderTypeSell {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+.orderTypeBuy.active {
+    background: #efefef;
+    color: #00C542;
+    border: solid 1px #eaeaea;
+}
+.orderTypeSell.active {
+    background: #efefef;
+    color: #e91c1c;
+    border: solid 1px #eaeaea;
+
+}
+.orderStatusContainer {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    padding-top: 12px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+.orderStatusContainer::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.orderStatusOption {
+    padding: 2px 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: solid 1px #eaeaea;
+}
+.orderStatusOption.active {
+    background: #eaeaea;
+}
+.displayContractContainer {
+    width: 100%;
+    min-height: 100px;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.displayContractTagAndTimeContainer {
+    width: 100%;
+    display: flex;
+}
+.contractDisplayExpiredTimer {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+}
+.contractOrderTypeContainer {
+    width: 50%;
+    font-size: 14px;
+}
+.contractOrderDetailsContainer {
+    width: 100%;
+    margin-top: 15px;
+}
+.contractOrderElementContainer {
+    display: flex;
+    margin-bottom: 5px;
+}
+.contractCancelContainer {
+    width: 100%;
+    border-radius: 5px;
+    background: #e0e0e0;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #ff1818;
+    margin-top: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.disputeButton {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.disputeAppeal {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffe100;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.contractOrderElementTag {
+    width: 50%;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+.contractOrderElementDetails {
+    width: 50%;
+    display: flex;
+    justify-content: right;
+    font-size: 14px;
+}
+.contractDetailsAmountContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+.contractDetailsCardContainer {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 1px #eaeaea;
+    min-height: 100px;
+    margin-top: 15px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contractDetailsStatusCard {
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+}
+.contractDetailsStatusCardTag {
+    justify-content: left;
+}
+.contractDetailsStatusCardDisplay {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+}
+.contractDetailsBuyerPaymentProofContainer {
+    width: 100%;
+    display: flex;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contractDetailsSellerViewPaymentScreenshotContainer {
+    width: 100%;
+    min-height: 100px;
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.contractOrderQrCodeDisplayContainer {
+    width: 100%;
+    display: flex;
+}
+.contractOrderQRCode {
+    width: 200px;
+    height: 200px;
+    border: solid 1px #b5b5b5;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.contractOrderMessageDisplayContainer {
+    width: 100%;
+    min-height: 45px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.contractOrderMessageDisplayContainer.buyer {
+    background: #d2d6ff;
+    border: solid 1px #bbbaff;
+    border-radius: 5px;
+}
+.contractOrderMessageDisplayContainer.seller {
+    background: #fff0dc;
+    border: solid 1px #ffd8a2;
+    border-radius: 5px;
+}
+/*
+Market New UI
+*/
+
+.ad-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ad-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.ad-type {
+  display: inline-block;
+  background-color: #ff9a0d;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.ad-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ad-label {
+  width: 45%;
+  font-size: 14px;
+  color: #555;
+}
+
+.ad-value {
+  width: 55%;
+  font-size: 14px;
+  text-align: right;
+  color: #111;
+}
+.ad-value.available {
+    color: #00C542;
+}
+.ad-bank-card {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    border-left: solid 3px #00C542;
+    margin-top: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background: #edfff3;
+    display: flex;
+}
+.bold {
+  font-weight: 600;
+}
+.ad-card-buy-button-container {
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    padding-right: 5;
+    align-items: center;
+}
+.ad-card-buy-button {
+    height: 25px;
+    padding: 0 10px;
+    background: #00C542;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+.ad-button {
+  margin-top: 18px;
+  display: flex;
+}
+.token-available-card-container {
+    width: 65%;
+    border: solid 1px #bdbdbd;
+    border-radius: 5px;
+    margin-right: 15px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.token-buy-button-container {
+    width: 35%;
+}
+
+/*
+Dispute chat
+*/
+
+.chat.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.chat-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  position: relative;
+}
+
+.admin-msg {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.user-msg {
+  align-self: flex-end;
+  background-color: #90ff9d;
+  border: solid 1px #24ff80;
+  color: #000000;
+}
+
+.timestamp {
+  font-size: 0.75rem;
+  color: #888;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.chat-input button {
+  padding: 10px 16px;
+  background-color: #0057ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.chat-input button:hover {
+  background-color: #0041cc;
+}
+
+/*Coupons*/
+.myCouponCodeDisplayContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+.couponCard {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease;
+}
+
+.couponCard:hover {
+  transform: translateY(-4px);
+}
+.couponDetails {
+  margin-bottom: 12px;
+}
+.couponAmount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00C542;
+}
+.couponCode {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #333;
+}
+.couponExpiry {
+  font-size: 12px;
+  color: #888;
+  margin-top: 4px;
+}
+.redeemButton {
+  background: #00C542;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.redeemButton:hover {
+  background: #01a337;
+}
+.profileUpdateContainer {
+    width: 100%;
+    min-height: 15px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px 10px 25px 10px;
+    box-sizing: border-box;
+}
+.usernameInput {
+    width: 100%;
+    padding: 10px 15px;
+    outline: none;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 15px;
+}

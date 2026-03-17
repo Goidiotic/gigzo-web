@@ -1,0 +1,31 @@
+.testimonials {
+  padding: 60px 80px;
+}
+
+.testimonials h3 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.testimonial-card p {
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+.testimonial-card span {
+  font-size: 12px;
+  color: #94a3b8;
+}

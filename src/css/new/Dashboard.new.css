@@ -1,0 +1,136 @@
+.dashboard-wrapper{
+  background: radial-gradient(circle at top,#111827,#020617);
+  min-height:100vh;
+  color:white;
+}
+
+.dashboard-container{
+  padding:40px 80px;
+}
+
+/* MAIN GRID */
+
+.main-grid{
+  display: flex;
+}
+
+/* EXCHANGE */
+
+.exchange-card2{
+  background:#111827;
+  padding:25px;
+  border-radius:16px;
+  border:1px solid #1e293b;
+  width: 60%;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.exchange-input{
+  margin-top:15px;
+}
+
+.exchange-input input{
+  width:100%;
+  padding:12px;
+  margin-top:5px;
+  border-radius:10px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:white;
+}
+
+.exchange-rate{
+  margin-top:15px;
+  color:#9ca3af;
+}
+
+.exchange-output{
+  margin-top:10px;
+}
+
+.exchange-btn{
+  margin-top:20px;
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+  color:#020617;
+  font-weight:600;
+}
+
+/* WALLET */
+
+.wallet-section{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width: 40%;
+}
+
+.wallet-card{
+  background:#111827;
+  padding:20px;
+  border-radius:16px;
+  border:1px solid #1e293b;
+}
+
+.wallet-header{
+  font-size:14px;
+  color:#9ca3af;
+}
+
+.wallet-actions{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+}
+
+.wallet-actions button{
+  flex:1;
+  padding:8px;
+  border-radius:8px;
+  border:none;
+  background:#020617;
+  color:white;
+}
+
+.wallet-chart{
+  margin-top:15px;
+  display:flex;
+  justify-content:center;
+}
+
+.donut{
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  border:8px solid #22d3ee;
+  border-right-color:#1e293b;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .dashboard-container{
+    padding:20px;
+  }
+
+  .main-grid{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wallet-section {
+    width: 100%;
+  }
+
+  .exchange-card2 {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+}

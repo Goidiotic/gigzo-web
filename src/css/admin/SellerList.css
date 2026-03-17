@@ -1,0 +1,94 @@
+.admin-page{
+  padding:30px;
+  background:#f6f8fb;
+  min-height:100vh;
+}
+
+.table-container{
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+.seller-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.seller-table th{
+  background:#f1f3f6;
+  padding:14px;
+  text-align:left;
+}
+
+.seller-table td{
+  padding:14px;
+  border-top:1px solid #eee;
+}
+
+.status{
+  padding:4px 10px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.status.active{
+  background:#e7f8ee;
+  color:#1f9d55;
+}
+
+.status.inactive{
+  background:#ffeaea;
+  color:#d93025;
+}
+
+.btn-active{
+  background:#1f9d55;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.btn-inactive{
+  background:#ff4d4f;
+  color:white;
+  border:none;
+  padding:6px 12px;
+  border-radius:5px;
+  cursor:pointer;
+}
+
+.page-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.seller-filter{
+  padding:8px 12px;
+  border:1px solid #ddd;
+  border-radius:5px;
+}
+
+.filter-buttons{
+  display:flex;
+  gap:10px;
+}
+
+.filter-buttons button{
+  padding:6px 14px;
+  border:1px solid #ddd;
+  background:white;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+.filter-active{
+  background:#2f6fed;
+  color:#000;
+  border-color:#2f6fed;
+}

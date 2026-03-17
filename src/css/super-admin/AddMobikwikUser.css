@@ -1,0 +1,100 @@
+.aduContainer {
+    width: 100%;
+    min-height: 100px;
+    padding: 15px;
+}
+.aduInputContainer {
+    width: 100%;
+    background: #f1f1f1;
+    border: solid 1px #eee;
+    border-radius: 5px;
+    padding: 10px;
+}
+.aduInput {
+    width: 100%;
+    height: 35px;
+    border-radius: 2px;
+    border: solid 1px #444;
+    padding-left: 10px;
+    font-size: 14px;
+    outline: none;
+    color: #444;
+    margin-bottom: 5px;
+    background: none;
+}
+.aduInputLabel {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.aduButtonSave {
+    width: 100%;
+    margin-top: 15px;
+    height: 40px;
+    color: #fff;
+    background: #000;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.aduUserDisplayConatiner {
+    width: 100%;
+    min-height: 10px;
+    padding: 10px;
+}
+.aduDisplayHeaderContainer {
+    display: flex;
+}
+.aduDisplayTag {
+    flex: 1;
+}
+.aduDisplayAddNewButtonCon {
+    font-size: 14px;
+    color: #050df3;
+    text-decoration: underline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.aduDisplayTag {
+    font-size: 14px;
+}
+.aduUserListContainer {
+    width: 100%;
+    background: #f7f7f7;
+    min-height: 50px;
+    padding: 0px 15px 15px 15px;
+    border: solid 1px #dddddd;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.aduUserListItemCon {
+    border-bottom: solid 1px #dddddd;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.aduUserListItemContentContainer {
+    display: flex;
+}
+.aduUserListItemLeftTag {
+    font-size: 14px;
+    flex: 1;
+}
+.aduUserListItemDeleteCon {
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+.aduDelet {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #f30505;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

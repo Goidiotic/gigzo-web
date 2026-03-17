@@ -1,0 +1,215 @@
+.p2p-wrapper{
+  width: 100%;
+}
+
+.p2p-title{
+  color:white;
+  text-align:center;
+  margin-bottom:30px;
+  font-weight:600;
+}
+
+/* GRID */
+
+.p2p-grid{
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+}
+
+/* CARD */
+
+.p2p-card{
+background:#020617;
+border:1px solid #1e293b;
+border-radius:16px;
+padding:22px;
+text-align:center;
+color:white;
+transition:0.2s;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.p2p-card:hover{
+border-color:#22d3ee;
+transform:translateY(-4px);
+box-shadow:0 10px 25px rgba(34,211,238,0.08);
+}
+
+/* HEX ICON */
+
+.token-box{
+  width:60px;
+  height:60px;
+  margin:auto;
+  margin-bottom:14px;
+  background:#0f172a;
+
+  clip-path: polygon(
+    25% 6%,
+    75% 6%,
+    100% 50%,
+    75% 94%,
+    25% 94%,
+    0% 50%
+  );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.token-box img{
+  width:28px;
+}
+
+/* PRICE */
+
+.p2p-price{
+  font-size:22px;
+  font-weight:700;
+  color:#22d3ee;
+  margin-bottom:14px;
+}
+
+/* ROW INFO */
+
+.p2p-row{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  margin-bottom:6px;
+  color:#9ca3af;
+}
+
+.p2p-row strong{
+  color:white;
+}
+
+/* SELLER */
+
+.seller-info{
+  border-top:1px solid #1e293b;
+  margin-top:14px;
+  padding-top:12px;
+}
+
+.seller-top{
+display:flex;
+align-items:center;
+gap:10px;
+justify-content:flex-start;
+}
+
+.seller-details{
+display:flex;
+flex-direction:column;
+}
+
+.seller-name-row{
+display:flex;
+align-items:center;
+gap:6px;
+}
+
+.seller-name{
+font-weight:600;
+}
+
+.verified{
+  color:#22d3ee;
+}
+
+.seller-meta{
+  font-size:12px;
+  color:#9ca3af;
+  margin-top:4px;
+}
+
+/* BUTTON */
+
+.p2p-buy-btn{
+  width:100%;
+  margin-top:14px;
+  padding:10px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+  color:#020617;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.p2p-loading{
+text-align:center;
+padding:40px;
+color:#9ca3af;
+}
+
+.p2p-filter-bar{
+  display:flex;
+  gap:10px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+
+.p2p-filter-input{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:#fff;
+  min-width:180px;
+}
+
+.p2p-filter-select{
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:#fff;
+}
+
+.seller-avatar{
+width:32px;
+height:32px;
+border-radius:50%;
+background:#0f172a;
+border:1px solid #1e293b;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:14px;
+font-weight:600;
+color:#22d3ee;
+}
+.merchant-icon{
+font-size:13px;
+color:#fbbf24;
+}
+.seller-meta{
+font-size:11px;
+color:#9ca3af;
+margin-top:2px;
+}
+/* TABLET */
+
+@media (max-width: 768px){
+
+  .p2p-grid{
+    grid-template-columns: repeat(2,1fr);
+  }
+
+}
+
+/* MOBILE */
+
+@media (max-width:500px){
+
+  .p2p-grid{
+    grid-template-columns:1fr;
+  }
+
+}

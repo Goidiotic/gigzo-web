@@ -1,0 +1,62 @@
+/* WRAPPER */
+
+.iox-p2p-menu-wrapper{
+  position:fixed;
+  top:64px; /* height of TopMenuCommon */
+  left:0;
+  width:100%;
+  background:#020617;
+  border-bottom:1px solid #1e293b;
+  z-index:999;
+}
+
+
+/* CONTAINER */
+
+.iox-p2p-menu-container{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  gap:24px;
+  padding:10px 20px;
+  align-items:center;
+}
+
+
+/* MENU ITEMS */
+
+.iox-p2p-menu-container span{
+  color:#9ca3af;
+  font-size:13px;
+  cursor:pointer;
+}
+
+.iox-p2p-menu-container span:hover{
+  color:#22d3ee;
+}
+
+
+/* -----------------------
+   TABLET
+----------------------- */
+
+@media(max-width:768px){
+
+  .iox-p2p-menu-wrapper{
+    display:none;
+  }
+
+}
+
+
+/* -----------------------
+   MOBILE
+----------------------- */
+
+@media(max-width:500px){
+
+  .iox-p2p-menu-wrapper{
+    display:none;
+  }
+
+}

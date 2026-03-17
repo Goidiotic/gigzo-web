@@ -1,0 +1,124 @@
+.iox-nav-wrapper{
+    width:100%;
+    border-bottom:1px solid #1e293b;
+    background:rgba(2,6,23,0.9);
+}
+
+.iox-nav-container{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.iox-logo{
+    cursor:pointer;
+}
+
+.top-nav-logo{
+    width:60px;
+}
+
+.iox-logo-menu-con{
+    display:flex;
+    align-items:center;
+}
+
+.iox-nav-center{
+    display:flex;
+    gap:30px;
+    color:#fff;
+    font-size:14px;
+    margin-left:100px;
+}
+
+.iox-nav-center span{
+    cursor:pointer;
+}
+
+.iox-nav-center span:hover{
+    color:#22d3ee;
+}
+
+.iox-nav-right{
+    display:flex;
+    gap:10px;
+}
+
+.iox-login-btn{
+    padding:8px 16px;
+    background:#324460;
+    border:1px solid #1e293b;
+    border-radius:8px;
+    color:#fff;
+    font-weight:bold;
+}
+
+.iox-register-btn{
+    padding: 8px;
+    background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+    border:none;
+    border-radius: 5px;
+    color:#000;
+    font-weight:bold;
+}
+
+.iox-wallet-btn {
+    padding: 8px;
+    background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+    border:none;
+    border-radius: 5px;
+    color:#000;
+    font-weight:bold;
+    display: none;
+}
+
+
+
+
+/* ============================= */
+/* TABLET RESPONSIVE */
+/* ============================= */
+
+@media (max-width:1024px){
+
+    .top-nav-logo{
+        width:50px;
+    }
+
+    .iox-nav-center{
+        display:none;
+    }
+
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width:600px){
+
+    .iox-nav-container{
+        padding:12px 16px;
+    }
+
+    .top-nav-logo{
+        width:42px;
+    }
+
+    .iox-nav-center{
+        display:none;
+    }
+
+    .iox-register-btn{
+        padding: 8px 8px;
+        font-size:13px;
+    }
+    .iox-wallet-btn {
+        display: flex;
+    }
+
+}

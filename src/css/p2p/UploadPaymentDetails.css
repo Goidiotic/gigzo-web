@@ -1,0 +1,129 @@
+/* PAGE WRAPPER */
+
+.upload-wrapper{
+  min-height:100vh;
+  background: radial-gradient(circle at top, #111827, #020617);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:16px;
+}
+
+/* CARD */
+
+.upload-card{
+  width:100%;
+  max-width:420px;
+  background: rgba(17,24,39,0.95);
+  border-radius:18px;
+  padding:26px;
+  border:1px solid #1e293b;
+  box-shadow:0 0 40px rgba(0,255,255,0.06);
+  color:#fff;
+}
+
+/* HEADER */
+
+.upload-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.upload-header h2{
+  font-size:20px;
+  font-weight:600;
+}
+
+.close-btn{
+  background:none;
+  border:none;
+  font-size:20px;
+  cursor:pointer;
+  color:#9ca3af;
+}
+
+.close-btn:hover{
+  color:#fff;
+}
+
+/* NOTE */
+
+.upload-note{
+  font-size:14px;
+  margin-top:10px;
+  color:#9ca3af;
+}
+
+/* FILE INPUT BOX */
+
+.upload-box{
+  margin-top:20px;
+  border:1px dashed #1e293b;
+  padding:24px;
+  text-align:center;
+  border-radius:14px;
+  background:#020617;
+}
+
+.upload-box input{
+  color:#fff;
+  cursor:pointer;
+}
+
+/* FILE NAME */
+
+.file-name{
+  margin-top:10px;
+  font-size:13px;
+  color:#22d3ee;
+  text-align:center;
+}
+
+/* BUTTON */
+
+.upload-btn{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border-radius:14px;
+  border:none;
+  background:linear-gradient(135deg,#22d3ee,#0ea5e9);
+  color:#020617;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.upload-btn:disabled{
+  background:#1e293b;
+  color:#64748b;
+  cursor:not-allowed;
+}
+
+/* UTR INPUT */
+
+.utr-input{
+  margin-top:16px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+.utr-input label{
+  font-size:13px;
+  color:#9ca3af;
+}
+
+.utr-input input{
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #1e293b;
+  background:#020617;
+  color:#fff;
+}
+
+.utr-input input:focus{
+  outline:none;
+  border-color:#22d3ee;
+}

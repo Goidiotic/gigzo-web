@@ -1,0 +1,28 @@
+.superAdminPageContainer {
+    width: 100%;
+    padding: 15px;
+}
+.superAdminUserSearchContainer {
+    width: 100%;
+}
+.superAdminUserSearchInput {
+    width: 100%;
+    height: 45px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: solid 1px #eeeeee;
+}
+.SuperAdminUserListFilterContainer {
+    display: flex;
+    margin-top: 15px;
+}
+.superAdmintableRow {
+    width: 100%;
+    border: solid 1px #eeeeee;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: #f8f8f8;
+    cursor: pointer;
+}

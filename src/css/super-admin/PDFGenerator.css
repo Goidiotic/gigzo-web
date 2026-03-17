@@ -1,0 +1,30 @@
+.pgContentContainer {
+    width: 100%;
+    min-height: 50px;
+    padding: 15px;
+}
+.pdfGeneratorButtonCon {
+    padding: 25px 15px 25px 15px;
+    border: solid 1px #eeeeee;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+.pdGeneratePDFButton {
+    width: 100%;
+    height: 40px;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.pdInput {
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border: solid 1px #000000;
+    border-radius: 5px;
+    outline: none;
+}

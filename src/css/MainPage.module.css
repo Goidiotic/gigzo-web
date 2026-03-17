@@ -1,0 +1,71 @@
+.dashContainer {
+    width: 100%;
+    background: #f2f2f2;
+    height: 100vh;
+}
+.dashboardHeader {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+.dashLogoContainer {
+    width: 120px;
+    display: flex;
+    align-items: center;
+}
+.dashLogo{
+    height: 50px;
+}
+.headerBlankSpace {
+    flex: 1;
+    background: #ff2a2a;
+}
+.dashWallet {
+    width: 150px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.dashWalletIcon img{
+    width: 24px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.dashWalletContent {
+    flex: 1;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.dashAssest {
+    font-weight: 600;
+}
+.dashWalletAssetTag {
+    margin-top: -7px;
+    font-size: 14px;
+}
+.dashContentContainer {
+    width: 100%;
+    min-height: 500px;
+    background: #ffffff;
+    border-radius: 15px 15px 0 0;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 150px;
+    box-sizing: border-box;
+}
+.dashBuySellButtonContainer {
+    width: 100%;
+    min-height: 50px;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+}
+.dashButtonContainer {
+    width: 50%;
+    box-sizing: border-box;
+}

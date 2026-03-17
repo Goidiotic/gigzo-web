@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============ Banner Section ============ */
+.dashboardBannerContainer {
+  margin: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #f3f6fa;
+}
+.dashboardBannerSliderWrapper {
+  position: relative;
+  margin: 16px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.sliderContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.sliderImage {
+  min-width: 100%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Dots at bottom */
+.sliderDots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dot {
+  display: inline-block;
+  height: 3px;
+  width: 10px;
+  margin: 0 4px;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #00c542;
+}
+
+
+/* ============ Menu Section ============ */
+.dashboardMenuItemContiner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0px 15px;
+}
+
+.dashboardMenuItem {
+  flex: 1;
+  min-width: 70px;
+  background: linear-gradient(to bottom right, #7f7fd5, #86a8e7);
+  border-radius: 12px;
+  text-align: center;
+  padding: 12px 8px;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.dashboardMenuCardItemOne {
+  background: linear-gradient(to bottom right, #d0ffd7, #50bd60);
+  color: #000;
+}
+
+.dashboardMenuCardItemTwo {
+  background: linear-gradient(to bottom right, #a1c4fd, #c2e9fb);
+  color: #000;
+}
+
+.dashboardMenuCardItemThree {
+  background: linear-gradient(to bottom right, #fbdec2, #e29348);
+  color: #000;
+}
+
+.dashboardMenuCardItemFour {
+  background: linear-gradient(to bottom right, #ffecd2, #fcb69f);
+  color: #000;
+}
+
+.dashboardMenuItem:hover {
+  transform: scale(1.02);
+}
+
+.menuItemIconContainer {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuItemIcon {
+  height: 30px;
+  width: 30px;
+}
+
+.menuItemTagContainer {
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+/* ============ Referral Section ============ */
+.referralLinkCard {
+  margin: 16px;
+  background-color: #f2f6ff;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  padding: 16px;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.referLinkTag {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #4a4a4a;
+}
+
+.rferralCodeContainer {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #00c542;
+}
+
+.referralCodeCopy {
+  background-color: #00c542;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #000000;
+  font-weight: 600;
+}
+
+/* ============ Coupon Section ============ */
+.dashboardCouponContainer {
+  margin: 16px;
+  background-color: #f2f6ff;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #333;
+  border: 1px solid #e3e3e3;
+}
+
+.dashboardApplyCouponeCode {
+  background-color: #00c542;
+  color: #000000;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.dashboardCouponTagContainer {
+  flex: 1;
+}
+
+/* ============ Stat Cards ============ */
+.dashboardStatCardsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 16px;
+}
+
+.dashboardStatCard {
+  flex: 1;
+  background-color: #f2f6ff;
+  border: 1px solid #d0ddff;
+  border-radius: 12px;
+  padding: 16px;
+  color: #222;
+  text-align: center;
+}
+
+.statTitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: #00c542;
+}
+
+/* ============ Announcements ============ */
+.dashboardAnnouncementContainer {
+  margin: 16px;
+  background-color: #fff8e1;
+  padding: 16px;
+  border-radius: 12px;
+  color: #333;
+  border: 1px solid #ffe9b3;
+}
+
+.announcementTitle {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.announcementList {
+  padding-left: 18px;
+  font-size: 13px;
+  color: #555;
+}
+
+/* ============ Important Links ============ */
+.dashboardLinksContainer {
+  margin: 16px;
+  background-color: #f3faff;
+  border-radius: 12px;
+  padding: 16px;
+  color: #333;
+  border: 1px solid #d3ecf9;
+}
+
+.importantLinksTitle {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.importantLinksList {
+  padding-left: 18px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #4a4a4a;
+}
+
+.importantLinksList li {
+  cursor: pointer;
+}
+
+.importantLinksList li:hover {
+  color: #005bea;
+  text-decoration: underline;
+}
