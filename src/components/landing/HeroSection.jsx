@@ -10,11 +10,11 @@ export default function HeroSection(){
 
     const [sellers,setSellers] = useState([]);
     const [loading,setLoading] = useState(true);
-    const [amount, setAmount] = useState("");
 
     const fetchSellers = async ()=>{
 
         try{
+
             const res = await axios.post("web/public/get-sellers");
 
             if(res.data.statusCode === 1000){
@@ -40,7 +40,8 @@ export default function HeroSection(){
 
             <div className="iox-hero-container">
 
-                {/* Header */}
+                {/* Buy Sell Header */}
+
                 <div className="iox-hero-header">
 
                     <div className="iox-trade-box">
@@ -67,15 +68,14 @@ export default function HeroSection(){
                 <div style={{width:'100%',border:'1px solid #1e293b',marginBottom:'20px'}}></div>
 
                 {/* Amount Input */}
+
                 <div className="iox-hero-input-row">
 
                     <div className="iox-amount-box">
 
                         <input 
-                            type="number"
-                            placeholder="Enter Amount"
-                            value={amount}
-                            onChange={(e)=>setAmount(e.target.value)}
+                        type="text"
+                        placeholder="Enter Amount"
                         />
 
                         <div className="iox-currency-box">
@@ -110,12 +110,6 @@ export default function HeroSection(){
                     ) : (
 
                     sellers.map((seller,index)=>{
-
-                        const isTopSeller = index === 0;
-
-                        const usdtReceive = amount && seller.price 
-                            ? (parseFloat(amount) / seller.price).toFixed(2)
-                            : 0;
 
                     return(
 
@@ -157,6 +151,7 @@ export default function HeroSection(){
 
 
                         {/*Seller meta-mobile*/}
+
                         <div className="iox-seller-meta-mobile">
                             {seller.orderCompleted} Orders | {seller.completionRate}% Success | ⏱ 15 Min
                         </div>
@@ -182,59 +177,13 @@ export default function HeroSection(){
                         </div>
 
 
-                        {/* 🔥 ONLY FIRST SELLER - CONVERSION BOX */}
-                        {isTopSeller && (
-
-                            <div className="iox-top-conversion-box">
-
-                                {/* INR Preview */}
-                                <div className="iox-top-inr-row">
-
-                                    <div className="iox-top-inr-tag">
-                                        <span className="iox-inr-circle">₹</span>
-                                        <span>INR</span>
-                                    </div>
-
-                                    <div className="iox-top-amount">
-                                        ₹ {amount || 0}
-                                    </div>
-
-                                </div>
-
-
-                                {/* USDT Conversion */}
-                                <div className="iox-top-usdt-row">
-
-                                    <div className="iox-top-usdt-left">
-
-                                        <div className="iox-top-usdt-icon">
-                                            <img src={iconUsdt} alt="usdt"/>
-                                        </div>
-
-                                        <div className="iox-top-usdt-text">
-                                            {usdtReceive} USDT Receive
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-
-                                {/* Payment */}
-                                <div className="iox-top-payment">
-                                    ⚡ Lightning UPI
-                                </div>
-
-                            </div>
-
-                        )}
-
-
-                        {/* Payment Methods (existing) */}
+                        {/* Payment Methods */}
                         <div className="iox-mobile-payments">
+
                             <span className="payment-tag">
-                                ⚡Lightning UPI
+                            ⚡Lightning UPI
                             </span>
+
                         </div>
 
 
@@ -242,10 +191,10 @@ export default function HeroSection(){
                         <div className="iox-mobile-action">
 
                             <button
-                                className="iox-seller-buy-btn"
-                                onClick={()=>navigate("/p2p/buy-usdt",{state:seller})}
+                            className="iox-seller-buy-btn"
+                            onClick={()=>navigate("/p2p/buy-usdt",{state:seller})}
                             >
-                                Buy
+                            Buy
                             </button>
 
                         </div>

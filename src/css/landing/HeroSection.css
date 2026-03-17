@@ -285,62 +285,6 @@
     cursor:pointer;
 }
 
-.iox-top-conversion-box{
-    margin-top: 12px;
-    padding: 12px;
-    border: 1px solid #1e293b;
-    border-radius: 12px;
-    background: rgba(2,6,23,0.6);
-}
-
-.iox-top-inr-row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.iox-top-inr-tag{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.iox-inr-circle{
-    background: #111827;
-    border-radius: 50%;
-    padding: 4px 8px;
-}
-
-.iox-top-usdt-row{
-    display: flex;
-    align-items: center;
-}
-
-.iox-top-usdt-left{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.iox-top-usdt-icon{
-    background: #fff;
-    border-radius: 50%;
-    padding: 5px;
-}
-
-.iox-top-usdt-icon img{
-    width: 18px;
-}
-
-.iox-top-usdt-text{
-    font-weight: 600;
-}
-
-.iox-top-payment{
-    margin-top: 8px;
-    font-size: 13px;
-}
 
 /* MOBILE */
 
