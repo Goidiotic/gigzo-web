@@ -9,6 +9,7 @@ import profileIcon from "../../icons/user.png";
 import { useNavigate } from "react-router-dom";
 import MobileBottomMenu from "./components/MobileBottomMenu";
 import P2PMainWrapper from "./components/P2PMainWrapper";
+import { getMobile, getUID } from "../../utils/authUser";
 
 export default function P2PMenu() {
 
@@ -28,11 +29,14 @@ export default function P2PMenu() {
   const openWallet = () => navigate("/p2p/p2p-wallet");
   const openOrders = () => navigate("/p2p/order-list");
   const openMarket = () => navigate("/p2p-market");
-  const openExchange = () => navigate("/exchange");
+  const openExchange = () => navigate("/exchage-currency");
   const openTerms = () => navigate("/terms");
   const openPrivacy = () => navigate("/privacy");
   const connectWallet = () => navigate("/connect-wallet");
-  const logout = () => navigate("/logout");
+  const logout = () => {
+    localStorage.removeItem("token");
+    navigate("/logout");
+  };
 
   /* ----------------------------------------
      UI
@@ -58,7 +62,10 @@ export default function P2PMenu() {
             <div className="p2p-profile-info">
 
               <div className="p2p-mobile">
-                {mobileNumber}
+                {getMobile || "+91 9999999999"}
+              </div>
+              <div className="p2p-mobile">
+                {getUID || "Your UID"}
               </div>
 
               <div className="p2p-wallet-status">

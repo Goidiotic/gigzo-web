@@ -41,7 +41,7 @@ export default function TopMenuCommon() {
 
           <button
             className="iox-menu-btn"
-            onClick={() => navigate("/exchange")}
+            onClick={() => navigate("/exchage-currency")}
           >
             Exchange
           </button>

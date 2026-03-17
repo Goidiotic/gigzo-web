@@ -5,6 +5,7 @@ import profileIcon from "../../icons/user.png";
 
 import { useNavigate } from "react-router-dom";
 import ExchnageMainWrapper from "./components/ExchangeMainWrapper";
+import { getMobile, getUID, logout } from "../../utils/authUser";
 
 export default function Profile() {
 
@@ -24,7 +25,10 @@ export default function Profile() {
   const openMarket = () => navigate("/p2p-market");
   const openExchange = () => navigate("/exchage-currency");
   const openDeposit = () => navigate("/deposit-inr");
-  const logout = () => navigate("/logout");
+  const logout = () => {
+    localStorage.removeItem("token");
+    navigate('/login');
+  }
 
   /* ----------------------------------------
      UI
@@ -50,7 +54,11 @@ export default function Profile() {
             <div className="p2p-profile-info">
 
               <div className="p2p-mobile">
-                {mobileNumber}
+                {getMobile || "+91 9999999999"}
+              </div>
+
+              <div className="p2p-mobile">
+                {getUID || "Your UID"}
               </div>
 
             </div>
