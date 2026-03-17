@@ -10,6 +10,7 @@ export default function MobileBottomMenu(){
     const menu = [
         {label:"Swap", path:"/exchage-currency"},
         {label:"Wallet", path:"/wallet"},
+        {label:"Deposit", path:"/deposit-inr"},
         {label:"Transactions", path:"/transaction-history"},
         {label:"Profile", path:"/exchange/profile"},
     ];

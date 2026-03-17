@@ -116,7 +116,7 @@ export default function DepositINR() {
       )}
       <PopupMessage message={popupMessage} onClose={()=>{setPopupMessage('')}} />
     <div>
-    <ExchnageInnerWrapper>
+    <ExchnageMainWrapper>
     <div className="deposit-wrapper">
       <div className="deposit-card">
 
@@ -192,7 +192,7 @@ export default function DepositINR() {
 
       </div>
     </div>
-    </ExchnageInnerWrapper>
+    </ExchnageMainWrapper>
     </div>
     </>
   );
