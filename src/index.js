@@ -10,6 +10,7 @@ import ProtectedRoute from './pages/ProtectedRoutes.jsx';
 import LoginNewPage from './pages/LoginNewPage.jsx';
 import RegisterNewPage from './pages/RegisterNewPage.jsx';
 import Dashboard from './pages/Dashboard.jsx';
+import MainProfile from './pages/Profile.jsx';
 
 import PurchaseUsdt from './pages/PurchaseUSDT.jsx';
 import UpiPayment from './pages/UpiPayment.jsx';
@@ -45,6 +46,7 @@ import AdminViewPayment from './pages/admin/AdminViewPayment.jsx';
 import P2P from './pages/p2p/P2P.jsx';
 import P2PMenu from './pages/p2p/P2PMenu.jsx';
 import Profile from './pages/exchange/Profile.jsx';
+import Notification from './pages/Notification.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -69,6 +71,17 @@ let allRouts = createBrowserRouter(
     {
       path: "register",
       element: <RegisterNewPage/>
+    },
+    {
+      path: 'notifications',
+      element: <Notification/>
+    },
+    {
+      path: "profile",
+      element:
+      <ProtectedRoute>
+        <MainProfile/>
+      </ProtectedRoute>
     },
     {
       path: "p2p-market",

@@ -10,17 +10,17 @@ export default function BuyGuide(){
     const steps = [
         {
             icon: iconPlaceOrder,
-            title: "Select Offer and Place Order",
+            title: "1. Select Offer and Place Order",
             desc: "Browse the ads, choose your preferred one, and click Buy. Once you place a P2P order, the crypto asset will be escrowed by IOX P2P."
         },
         {
             icon: iconPaySeller,
-            title: "Pay the Seller",
+            title: "2. Pay the Seller",
             desc: "Send money to the seller via the suggested payment methods. Complete the fiat transaction and click 'Transferred, notify seller' on IOX P2P."
         },
         {
             icon: iconReceiveCrypto,
-            title: "Receive Crypto",
+            title: "3. Receive Crypto",
             desc: "Once the seller confirms receipt of money, the escrowed crypto will be released to you."
         }
     ];

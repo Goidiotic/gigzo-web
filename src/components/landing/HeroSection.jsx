@@ -15,7 +15,7 @@ export default function HeroSection(){
 
         try{
 
-            const res = await axios.post("web/private/get-sellers");
+            const res = await axios.post("web/public/get-sellers");
 
             if(res.data.statusCode === 1000){
                 setSellers(res.data.data.sellers);

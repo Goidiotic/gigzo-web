@@ -80,7 +80,7 @@ export default function TopMenuCommon() {
             src={profileIcon}
             alt="profile"
             className="iox-profile-icon"
-            onClick={() => navigate("/p2p/menu")}
+            onClick={() => navigate("/profile")}
           />
 
         </div>

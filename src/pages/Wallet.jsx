@@ -11,7 +11,7 @@ export default function Wallet() {
   const navigate = useNavigate();
 
   const [inrBalance, setInrBalance] = useState(0);
-  const [usdtBalance, setUsdtBalance] = useState(0.000000);
+  const [usdtBalance, setUsdtBalance] = useState(0.00);
   const [transactions, setTransactions] = useState([]);
 
 function formatDate(date){

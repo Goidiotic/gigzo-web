@@ -19,10 +19,6 @@ export default function LandingPage() {
     
     <div className="iox-landing-page-wrapper">
         <TopNav/>
-        <WebMainMenu/>
-        {/*P2P Seller and Buyer section*/}
-        {/* MARKET Price */}
-        <MarketRates/>
         <HeroSection/>
         {/*How to Buy*/}
         <BuyGuide/>
