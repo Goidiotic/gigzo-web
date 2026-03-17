@@ -10,11 +10,10 @@ export default function HeroSection(){
 
     const [sellers,setSellers] = useState([]);
     const [loading,setLoading] = useState(true);
+    const [amount, setAmount] = useState("");
 
     const fetchSellers = async ()=>{
-
         try{
-
             const res = await axios.post("web/public/get-sellers");
 
             if(res.data.statusCode === 1000){
@@ -26,13 +25,11 @@ export default function HeroSection(){
         }finally{
             setLoading(false);
         }
-
     }
 
     useEffect(()=>{
         fetchSellers();
     },[]);
-
 
     return(
 
@@ -40,10 +37,8 @@ export default function HeroSection(){
 
             <div className="iox-hero-container">
 
-                {/* Buy Sell Header */}
-
+                {/* Header */}
                 <div className="iox-hero-header">
-
                     <div className="iox-trade-box">
 
                         <div className="iox-hero-trade-tabs">
@@ -62,34 +57,25 @@ export default function HeroSection(){
                         </div>
 
                     </div>
-
                 </div>
 
                 <div style={{width:'100%',border:'1px solid #1e293b',marginBottom:'20px'}}></div>
 
-                {/* Amount Input */}
-
+                {/* Global Amount Input */}
                 <div className="iox-hero-input-row">
 
                     <div className="iox-amount-box">
-
                         <input 
-                        type="text"
-                        placeholder="Enter Amount"
+                            type="number"
+                            placeholder="Enter Amount"
+                            value={amount}
+                            onChange={(e)=>setAmount(e.target.value)}
                         />
 
                         <div className="iox-currency-box">
-
-                            <div className="iox-rupee-icon">
-                                ₹
-                            </div>
-
-                            <div className="iox-currency-label">
-                                INR
-                            </div>
-
+                            <div className="iox-rupee-icon">₹</div>
+                            <div className="iox-currency-label">INR</div>
                         </div>
-
                     </div>
 
                     <div className="iox-sort-box">
@@ -99,6 +85,7 @@ export default function HeroSection(){
                 </div>
 
 
+                {/* Seller List */}
                 <div className="iox-seller-list">
 
                     {loading ? (
@@ -109,101 +96,159 @@ export default function HeroSection(){
 
                     ) : (
 
-                    sellers.map((seller,index)=>{
+                        sellers.map((seller,index)=>{
 
-                    return(
+                            const isTopSeller = index === 0;
 
-                    <div className="iox-seller-row" key={seller.sellerId || index}>
+                            const usdtReceive = amount && seller.price 
+                                ? (parseFloat(amount) / seller.price).toFixed(2)
+                                : 0;
 
-                        {/* Seller Header */}
-                        <div className="iox-seller-header">
+                            return(
 
-                            <div className="iox-avatar">
-                                {seller.sellerName.charAt(0)}
-                            </div>
+                                isTopSeller ? (
 
-                            <div className="iox-seller-info">
-                                <div className="iox-seller-name">
-                                    {seller.sellerName}&nbsp;
-                                </div>
+                                    /* 🔥 TOP SELLER CARD */
+                                    <div className="iox-top-seller-card" key={seller.sellerId || index}>
 
-                                <span className="iox-seller-verified-desktop">
-                                    ✓ Verified Seller
-                                </span>
+                                        {/* Header */}
+                                        <div className="top-seller-header">
 
-                                <div className="iox-seller-verified-mobile">
-                                    ✓ Verified Seller
-                                </div>
+                                            <div className="top-avatar">
+                                                {seller.sellerName.charAt(0)}
+                                            </div>
 
-                                <div className="iox-seller-meta-desktop">
-                                    {seller.orderCompleted} Orders | Completion {seller.completionRate}%
-                                </div>
+                                            <div className="top-seller-details">
+                                                <div className="top-seller-name">
+                                                    {seller.sellerName}
+                                                </div>
 
-                                <div className="iox-seller-status">
-                                    <span className="iox-status-dot"></span>
-                                    <span className="iox-status-text">
-                                        Online
-                                    </span>
-                                </div>
-                            </div>
+                                                <div className="top-verified">
+                                                    ✓ Verified Seller
+                                                </div>
+                                            </div>
 
-                        </div>
+                                            <div className="top-price">
+                                                ₹ {seller.price}
+                                            </div>
+
+                                        </div>
 
 
-                        {/*Seller meta-mobile*/}
+                                        {/* Input */}
+                                        <div className="top-input-row">
 
-                        <div className="iox-seller-meta-mobile">
-                            {seller.orderCompleted} Orders | {seller.completionRate}% Success | ⏱ 15 Min
-                        </div>
+                                            <div className="top-amount-box">
 
+                                                <input
+                                                    type="number"
+                                                    placeholder="Enter Amount"
+                                                    value={amount}
+                                                    onChange={(e)=>setAmount(e.target.value)}
+                                                />
 
-                        {/* Price */}
-                        <div className="iox-mobile-price">
-                            ₹ {seller.price}
-                        </div>
+                                                <div className="top-inr-tag">
+                                                    <span className="circle">₹</span>
+                                                    INR
+                                                </div>
 
+                                            </div>
 
-                        {/* Available */}
-                        <div className="iox-mobile-available">
-
-                            <div>
-                                Available: {(seller.usdtAvailable).toFixed(2)} USDT
-                            </div>
-
-                            <div className="iox-limit">
-                                Limit: ₹ {seller.minOrderQuantity} - ₹ {Math.floor(seller.usdtAvailable * seller.price)}
-                            </div>
-
-                        </div>
+                                        </div>
 
 
-                        {/* Payment Methods */}
-                        <div className="iox-mobile-payments">
+                                        {/* Conversion */}
+                                        <div className="top-conversion">
 
-                            <span className="payment-tag">
-                            ⚡Lightning UPI
-                            </span>
+                                            <div className="usdt-icon">
+                                                <img src={iconUsdt} alt="usdt"/>
+                                            </div>
 
-                        </div>
+                                            <div className="usdt-text">
+                                                {usdtReceive} USDT Receive
+                                            </div>
+
+                                        </div>
 
 
-                        {/* Action */}
-                        <div className="iox-mobile-action">
+                                        {/* Payment */}
+                                        <div className="top-payment">
+                                            ⚡ Lightning UPI
+                                        </div>
 
-                            <button
-                            className="iox-seller-buy-btn"
-                            onClick={()=>navigate("/p2p/buy-usdt",{state:seller})}
-                            >
-                            Buy
-                            </button>
 
-                        </div>
+                                        {/* Button */}
+                                        <button
+                                            className="top-buy-btn"
+                                            onClick={()=>navigate("/p2p/buy-usdt",{state:seller})}
+                                        >
+                                            Buy
+                                        </button>
 
-                    </div>
+                                    </div>
 
-                    )
+                                ) : (
 
-                    })
+                                    /* NORMAL SELLER */
+                                    <div className="iox-seller-row" key={seller.sellerId || index}>
+
+                                        <div className="iox-seller-header">
+
+                                            <div className="iox-avatar">
+                                                {seller.sellerName.charAt(0)}
+                                            </div>
+
+                                            <div className="iox-seller-info">
+
+                                                <div className="iox-seller-name">
+                                                    {seller.sellerName}
+                                                </div>
+
+                                                <span className="iox-seller-verified-desktop">
+                                                    ✓ Verified Seller
+                                                </span>
+
+                                                <div className="iox-seller-meta-desktop">
+                                                    {seller.orderCompleted} Orders | Completion {seller.completionRate}%
+                                                </div>
+
+                                                <div className="iox-seller-status">
+                                                    <span className="iox-status-dot"></span>
+                                                    <span className="iox-status-text">
+                                                        Online
+                                                    </span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div className="iox-mobile-meta">
+                                            ₹ {seller.price} | Available: {(seller.usdtAvailable).toFixed(2)} USDT
+                                        </div>
+
+                                        <div className="iox-mobile-limit">
+                                            Limit: ₹ {seller.minOrderQuantity} - ₹ {Math.floor(seller.usdtAvailable * seller.price)}
+                                        </div>
+
+                                        <div className="iox-mobile-payments">
+                                            ⚡ Lightning UPI
+                                        </div>
+
+                                        <button
+                                            className="iox-seller-buy-btn"
+                                            onClick={()=>navigate("/p2p/buy-usdt",{state:seller})}
+                                        >
+                                            Buy
+                                        </button>
+
+                                    </div>
+
+                                )
+
+                            )
+
+                        })
 
                     )}
 
