@@ -8,10 +8,10 @@ export default function MobileBottomMenu(){
     const location = useLocation();
 
     const menu = [
-        {label:"Exchange", path:"/exchage-currency"},
+        {label:"Swap", path:"/exchage-currency"},
         {label:"Wallet", path:"/wallet"},
         {label:"Transactions", path:"/transaction-history"},
-        {label:"Profile", path:"/profile"},
+        {label:"Profile", path:"/exchange/profile"},
     ];
 
     return(

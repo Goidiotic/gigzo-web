@@ -143,7 +143,7 @@ let allRouts = createBrowserRouter(
       
     },
     {
-      path: 'profile',
+      path: 'exchange/profile',
       element: 
       <ProtectedRoute>
         <Profile/>

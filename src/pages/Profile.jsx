@@ -92,19 +92,19 @@ export default function Profile() {
         <div className="menu-section">
           <div className="menu-title">P2P</div>
 
-          <div className="menu-item">P2P Market</div>
-          <div className="menu-item">Orders</div>
-          <div className="menu-item">Wallet</div>
+          <div className="menu-item" onClick={()=>navigate('/p2p-market')}>P2P Market</div>
+          <div className="menu-item" onClick={()=>navigate('/p2p/order-list')}>Orders</div>
+          <div className="menu-item" onClick={()=>navigate('/p2p/p2p-wallet')}>Wallet</div>
         </div>
 
         {/* Exchange */}
         <div className="menu-section">
           <div className="menu-title">Exchange</div>
 
-          <div className="menu-item">Swap</div>
-          <div className="menu-item">Transactions</div>
-          <div className="menu-item">Wallet</div>
-          <div className="menu-item">Deposit INR</div>
+          <div className="menu-item" onClick={()=>navigate('/exchage-currency')}>Swap</div>
+          <div className="menu-item" onClick={()=>navigate('/transaction-history')}>Transactions</div>
+          <div className="menu-item" onClick={()=>navigate('/wallet')}>Wallet</div>
+          <div className="menu-item" onClick={()=>navigate('/deposit-inr')}>Deposit INR</div>
         </div>
 
         {/* Common */}

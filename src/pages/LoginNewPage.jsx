@@ -54,7 +54,7 @@ export default function Login() {
 
           // Save token
           localStorage.setItem("token", res.data.data.auth.token);
-          navigate("/wallet");
+          navigate("/p2p-market");
         }, 1000);
 
       }else {
