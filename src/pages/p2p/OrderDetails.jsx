@@ -242,14 +242,7 @@ export default function P2POrderDetails(){
             {/* ACTION BUTTONS */}
 
             <div className="order-buttons">
-              {!isExpired && (
-                <button
-                  className="action-btn2"
-                  onClick={handleUploadProof}
-                >
-                  Upload Payment Proof
-                </button>
-              )}
+
               {(order.status === "unpaid" && !isExpired) && (
                 <button
                   className="action-btn2"
@@ -258,7 +251,15 @@ export default function P2POrderDetails(){
                   View Payment Details
                 </button>
               )}
-
+              {!isExpired && (
+                <button
+                  className="action-btn2"
+                  onClick={handleUploadProof}
+                >
+                  Upload Payment Proof
+                </button>
+              )}
+              
               {order.status==="unpaid" && !isExpired && (
                 <button
                   className="action-btn2 danger"
