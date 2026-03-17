@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../../css/new/P2POrders.new.css";
 import "../../css/p2p/P2P.css";
-import P2PWrapper from "./components/P2PWrapper";
 import axios from "../../Axios2";
 import iconUsdt from "../../icons/usdt.png";
 import { useNavigate } from "react-router-dom";
-import TopMenuLoggedIn from "./components/TopMenu";
-import MobileBottomMenu from "./components/MobileBottomMenu";
 import P2PMainWrapper from "./components/P2PMainWrapper";
 
 export default function P2POrders() {

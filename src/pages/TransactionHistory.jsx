@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/new/TransactionHistory.new.css";
+import "../css/new/P2POrders.new.css";
+import "../css/p2p/P2P.css";
 import TopMenu from "../components/new/TopMenu";
 import axios from "../Axios2";
 import iconUsdt from "../icons/usdt.png";
