@@ -90,116 +90,6 @@
     color:white;
 }
 
-.iox-top-seller-card{
-    background: rgba(17,24,39,0.95);
-    border: 1px solid #1e293b;
-    border-radius: 16px;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-/* Header */
-.top-seller-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.top-avatar{
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    color: #000;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.top-seller-details{
-    flex: 1;
-    margin-left: 10px;
-}
-
-.top-seller-name{
-    font-weight: 600;
-}
-
-.top-verified{
-    font-size: 12px;
-    color: #22c55e;
-}
-
-.top-price{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Input */
-.top-input-row{
-    margin-top: 15px;
-}
-
-.top-amount-box{
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #1e293b;
-    border-radius: 12px;
-    padding: 10px;
-}
-
-.top-inr-tag{
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.circle{
-    background: #111827;
-    border-radius: 50%;
-    padding: 5px 8px;
-}
-
-/* Conversion */
-.top-conversion{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.usdt-icon{
-    background: #fff;
-    padding: 6px;
-    border-radius: 50%;
-}
-
-.usdt-icon img{
-    width: 20px;
-}
-
-.usdt-text{
-    font-size: 16px;
-    font-weight: 600;
-}
-
-/* Payment */
-.top-payment{
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* Button */
-.top-buy-btn{
-    width: 100%;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 12px;
-    background: linear-gradient(90deg,#22d3ee,#0ea5e9);
-    border: none;
-    font-weight: bold;
-}
-
 
 /* CURRENCY */
 
@@ -395,6 +285,62 @@
     cursor:pointer;
 }
 
+.iox-top-conversion-box{
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    background: rgba(2,6,23,0.6);
+}
+
+.iox-top-inr-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.iox-top-inr-tag{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.iox-inr-circle{
+    background: #111827;
+    border-radius: 50%;
+    padding: 4px 8px;
+}
+
+.iox-top-usdt-row{
+    display: flex;
+    align-items: center;
+}
+
+.iox-top-usdt-left{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.iox-top-usdt-icon{
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.iox-top-usdt-icon img{
+    width: 18px;
+}
+
+.iox-top-usdt-text{
+    font-weight: 600;
+}
+
+.iox-top-payment{
+    margin-top: 8px;
+    font-size: 13px;
+}
 
 /* MOBILE */
 
