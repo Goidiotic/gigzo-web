@@ -54,7 +54,7 @@ export default function Login() {
 
           // Save token
           localStorage.setItem("token", res.data.data.auth.token);
-          navigate("/dashboard-new");
+          navigate("/wallet");
         }, 1000);
 
       }else {
