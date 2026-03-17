@@ -75,7 +75,7 @@ export default function Login() {
     const token = localStorage.getItem('token');
 
     if(token) {
-      navigate("/wallet");
+      navigate("/p2p-market");
     }
 
   }, [navigate])

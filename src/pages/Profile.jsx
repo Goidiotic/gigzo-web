@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../css/new/Profile.css";
-import { getMobile, getUID, logout } from "../utils/authUser";
+import { getMobile, getUID } from "../utils/authUser";
 import TopMenuCommon from "../components/new/TopCommonMenu";
 import axios from "../Axios2";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
+
+  const navigate = useNavigate();
 
   const mobile = getMobile();
   const uid = getUID();
@@ -33,6 +36,11 @@ export default function Profile() {
       console.log(error.message);
     }
   };
+
+  const logout = ()=> {
+    localStorage.removeItem("token");
+    navigate("/login");
+  }
 
     useEffect(()=>{
       getWalletBalance();

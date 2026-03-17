@@ -168,6 +168,16 @@ export default function Register() {
     const res = await axios.post("/web/public/init", {abc: "A"});
   }
 
+    useEffect(()=>{
+      
+      const token = localStorage.getItem('token');
+  
+      if(token) {
+        navigate("/p2p-market");
+      }
+  
+    }, [navigate])
+
   return (
     <div className="exchange-register-wrapper">
 

@@ -54,11 +54,7 @@ let allRouts = createBrowserRouter(
   [
     {
       path: "/",
-      element: 
-      <ProtectedRoute>
-        <Wallet/>
-      </ProtectedRoute>
-      
+      element: <LandingPage/>
     },
     {
       path: 'p2p/public-market',
