@@ -38,7 +38,7 @@ export default function P2PMenu() {
   const connectWallet = () => navigate("/connect-wallet");
   const logout = () => {
     localStorage.removeItem("token");
-    navigate("/logout");
+    navigate("/login");
   };
 
   /* ----------------------------------------
