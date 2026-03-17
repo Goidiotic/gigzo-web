@@ -60,7 +60,7 @@ export default function Profile() {
               </div>
 
               <div className="p2p-mobile">
-                {uid || "Your UID"}
+                UID: {uid || "Your UID"}
               </div>
 
             </div>

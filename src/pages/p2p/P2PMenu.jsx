@@ -68,7 +68,7 @@ export default function P2PMenu() {
                 {mobile || "+91 9999999999"}
               </div>
               <div className="p2p-mobile">
-                {uid || "Your UID"}
+                UID: {uid || "Your UID"}
               </div>
 
               <div className="p2p-wallet-status">
