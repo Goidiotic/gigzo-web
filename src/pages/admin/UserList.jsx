@@ -1,37 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../../css/admin/UserList.css";
 import TopNavMenu from "../../components/admin2/TopNavMenu";
+import axios from "../../Axios2";
 
 export default function UserList() {
 
   const [users, setUsers] = useState([]);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-
-    // Replace with API
-    setUsers([
-      {
-        uid: "U10001",
-        mobile: "9876543210",
-        status: "active",
-        type: "user"
-      },
-      {
-        uid: "U10002",
-        mobile: "9123456780",
-        status: "blocked",
-        type: "user"
-      },
-      {
-        uid: "U10003",
-        mobile: "9998887777",
-        status: "active",
-        type: "admin"
-      }
-    ]);
-
-  }, []);
 
   const copyText = (text) => {
     navigator.clipboard.writeText(text);
@@ -42,6 +17,26 @@ export default function UserList() {
     u.uid.toLowerCase().includes(search.toLowerCase()) ||
     u.mobile.includes(search)
   );
+
+
+  const fetchUsers = async () => {
+    try {
+      const res = await axios.post("web/private//admin/get-users", {
+        page: 1,
+        limit: 20,
+        search: search
+      });
+
+      setUsers(res.data.data.users);
+
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, [search]);
 
   return (
     <>
