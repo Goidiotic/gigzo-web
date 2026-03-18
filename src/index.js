@@ -32,6 +32,7 @@ import SellerList from './pages/admin/SellerList.jsx';
 import OrderList from './pages/admin/OrderList.jsx';
 
 import LandingPage from './pages/p2p/LandingPage.jsx';
+import HighConvertLanding from './pages/HighConvertLanding.jsx';
 import P2PWallet from './pages/p2p/P2PWallet.jsx';
 import BuyUsdtP2P from './pages/p2p/BuyUsdtP2P.jsx';
 import P2POrders from './pages/p2p/P2POrders.jsx';
@@ -54,11 +55,11 @@ let allRouts = createBrowserRouter(
   [
     {
       path: "/",
-      element: <LandingPage/>
+      element: <HighConvertLanding/>
     },
     {
       path: 'p2p/public-market',
-      element: <LandingPage/>
+      element: <HighConvertLanding/>
     },
     {
       path: "login",

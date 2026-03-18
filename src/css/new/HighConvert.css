@@ -1,0 +1,99 @@
+.exchange-wrapper {
+  background: #020617;
+  color: #fff;
+  padding-bottom: 80px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.price {
+  font-size: 28px;
+  color: #22d3ee;
+  margin: 10px 0;
+}
+
+.primary-btn {
+  background: linear-gradient(90deg,#22d3ee,#0ea5e9);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #000;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.secondary-btn {
+  background: transparent;
+  border: 1px solid #1e293b;
+  padding: 12px 20px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+/* SOCIAL */
+.social-bar {
+  background: #111827;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* SELLER CARD */
+.exchange-card {
+  background: rgba(17,24,39,0.95);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.price-big {
+  font-size: 24px;
+  color: #22d3ee;
+}
+
+/* STICKY CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #020617;
+  padding: 10px;
+}
+
+.sticky-cta button {
+  width: 100%;
+  background: linear-gradient(90deg,#22d3ee,#0ea5e9);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* POPUP */
+.fomo-popup {
+  position: fixed;
+  bottom: 80px;
+  left: 20px;
+  background: #111827;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+}
