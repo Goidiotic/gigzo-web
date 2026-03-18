@@ -96,7 +96,10 @@ let allRouts = createBrowserRouter(
     },
     {
       path: "purchase-usdt",
-      element: <PurchaseUsdt/>
+      element: 
+      <ProtectedRoute>
+      <PurchaseUsdt/>
+      </ProtectedRoute>
     },
     {
       path: 'upi-payment',
@@ -192,7 +195,11 @@ let allRouts = createBrowserRouter(
     },
     {
       path: 'p2p/buy-usdt',
-      element: <BuyUsdtP2P/>
+      element: 
+      <ProtectedRoute>
+        <BuyUsdtP2P/>  
+      </ProtectedRoute>
+      
     },
     {
       path: 'p2p/order-list',
@@ -232,35 +239,59 @@ let allRouts = createBrowserRouter(
     },
     {
       path: 'a/c/user-list',
-      element: <UserList/>
+      element: 
+      <ProtectedRoute>
+      <UserList/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/create-seller',
-      element: <CreateSeller/>
+      element: 
+      <ProtectedRoute>
+      <CreateSeller/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/seller-list',
-      element: <SellerList/>
+      element: 
+      <ProtectedRoute>
+      <SellerList/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/order-list',
-      element: <OrderList/>
+      element: 
+      <ProtectedRoute>
+      <OrderList/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/upload-payment-details',
-      element: <AdminUploadPayment/>
+      element: 
+      <ProtectedRoute>
+      <AdminUploadPayment/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/add-payment-provider',
-      element: <PaymentProvider/>
+      element: 
+      <ProtectedRoute>
+      <PaymentProvider/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/payment-provider-list',
-      element: <PaymentProviderList/>
+      element: 
+      <ProtectedRoute>
+      <PaymentProviderList/>
+      </ProtectedRoute>
     },
     {
       path: 'a/c/payment-view',
-      element: <AdminViewPayment/>
+      element: 
+      <ProtectedRoute>
+      <AdminViewPayment/>
+      </ProtectedRoute>
     },
     {
       path: '*',
