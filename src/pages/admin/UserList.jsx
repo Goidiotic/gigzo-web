@@ -21,7 +21,7 @@ export default function UserList() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.post("web/private//admin/get-users", {
+      const res = await axios.post("web/private/admin/get-users", {
         page: 1,
         limit: 20,
         search: search
