@@ -13,6 +13,35 @@ export default function P2POrderList() {
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("unpaid");
 
+
+  function formatDate(date){
+
+    const today = new Date();
+    const txDate = new Date(date);
+
+    const diff = Math.floor(
+      (today.setHours(0,0,0,0) - new Date(txDate).setHours(0,0,0,0)) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    const time = txDate.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+
+    if(diff === 0) return `Today ${time}`;
+    if(diff === 1) return `Yesterday ${time}`;
+
+    const datePart = txDate.toLocaleDateString("en-IN", {
+      day:"2-digit",
+      month:"long",
+      year:"numeric"
+    });
+
+    return `${datePart} ${time}`;
+  }
+
   /* --------------------------------
      Fetch Orders
   -------------------------------- */
@@ -274,7 +303,11 @@ export default function P2POrderList() {
 
                   <tr key={index}>
 
-                    <td>{order.orderId}</td>
+                    <td>
+                      <div>{order.orderId}</div>
+                      <div>Created At: {formatDate(order.createdAt)}</div>
+                      <div>Updated At: {formatDate(order.updatedAt)}</div>
+                    </td>
 
                     <td>
                       <span className="buyer-badge">
