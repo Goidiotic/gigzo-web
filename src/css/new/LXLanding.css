@@ -1,0 +1,150 @@
+.lx-landing {
+  background: #020617;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* HERO */
+.lx-hero {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.lx-hero-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.lx-hero-sub {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.lx-price {
+  font-size: 32px;
+  color: #22d3ee;
+  margin: 15px 0;
+}
+
+/* BUTTONS */
+.lx-btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.lx-btn-primary {
+  background: linear-gradient(90deg,#22d3ee,#0ea5e9);
+  color: #000;
+}
+
+.lx-btn-outline {
+  border: 1px solid #1e293b;
+  color: #fff;
+  background: transparent;
+}
+
+.lx-cta-group {
+  margin-top: 10px;
+}
+
+/* SOCIAL */
+.lx-social {
+  background: #111827;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* SECTION */
+.lx-section {
+  padding: 30px 20px;
+}
+
+.lx-section-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* STEPS */
+.lx-steps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lx-step {
+  background: #111827;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* CARD */
+.lx-card {
+  background: rgba(17,24,39,0.95);
+  border: 1px solid #1e293b;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+.lx-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.lx-badge {
+  color: #22c55e;
+}
+
+.lx-price-big {
+  font-size: 26px;
+  color: #22d3ee;
+  margin: 10px 0;
+}
+
+.lx-meta {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+/* STICKY */
+.lx-sticky {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: #020617;
+}
+
+.lx-sticky button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  background: linear-gradient(90deg,#22d3ee,#0ea5e9);
+}
+
+/* TOAST */
+.lx-toast {
+  position: fixed;
+  bottom: 80px;
+  left: 15px;
+  background: #111827;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* MODAL */
+.lx-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.lx-modal-box {
+  background: #020617;
+  padding: 20px;
+  border-radius: 12px;
+}

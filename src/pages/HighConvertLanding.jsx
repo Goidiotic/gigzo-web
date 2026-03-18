@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
-import "../css/new/HighConvert.css";
+import "../css/new/LXLanding.css";
 import { useNavigate } from "react-router-dom";
 
-export default function HighConvertLanding() {
+export default function LXLanding() {
 
   const navigate = useNavigate();
-
-  const [showPopup, setShowPopup] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // connect auth later
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setShowPopup(true);
-    }, 5000);
+    setTimeout(() => setShowToast(true), 5000);
   }, []);
 
   const handleBuy = () => {
+    const isLoggedIn = false;
+
     if (!isLoggedIn) {
-      document.getElementById("loginModal").style.display = "flex";
+      document.getElementById("lx-auth-modal").style.display = "flex";
     } else {
       navigate("/p2p/buy");
     }
@@ -43,153 +41,146 @@ export default function HighConvertLanding() {
   ];
 
   return (
-    <div className="exchange-wrapper">
+    <div className="lx-landing">
 
       {/* HERO */}
-      <section className="hero">
-        <h1>Buy USDT at Lowest Price in India 🇮🇳</h1>
-        <p>UPI / Bank Transfer • Instant P2P • Secure Escrow</p>
+      <section className="lx-hero">
+        <h1 className="lx-hero-title">
+          Buy USDT at Lowest Price in India 🇮🇳
+        </h1>
 
-        <div className="price">₹93 / USDT</div>
+        <p className="lx-hero-sub">
+          UPI / Bank Transfer • Instant P2P • Secure Escrow
+        </p>
 
-        <div className="cta-group">
-          <button className="primary-btn" onClick={handleBuy}>
+        <div className="lx-price">₹93 / USDT</div>
+
+        <div className="lx-cta-group">
+          <button className="lx-btn lx-btn-primary" onClick={handleBuy}>
             Buy USDT Now
           </button>
-          <button className="secondary-btn">
+
+          <button className="lx-btn lx-btn-outline">
             View Best Offers
           </button>
         </div>
 
-        <div className="trust-line">
+        <div className="lx-trust">
           🔒 Secure • 👥 10,000+ Users • ⚡ Instant Transfer
         </div>
       </section>
 
-      {/* SOCIAL PROOF */}
-      <section className="social-bar">
-        👥 128 users buying now &nbsp;&nbsp;
-        ₹12,45,000 traded today &nbsp;&nbsp;
-        ⭐ 4.8 rating &nbsp;&nbsp;
-        ⚡ 23 orders completed in last hour
+      {/* SOCIAL BAR */}
+      <section className="lx-social">
+        👥 128 users buying now • ₹12,45,000 traded today • ⭐ 4.8 • ⚡ 23 orders/hr
       </section>
 
-      {/* HOW IT WORKS */}
-      <section className="how">
-        <h2>How to Buy USDT in 3 Steps</h2>
+      {/* HOW */}
+      <section className="lx-section">
+        <h2 className="lx-section-title">How to Buy USDT</h2>
 
-        <div className="steps">
-          <div className="step">1. Choose a seller</div>
-          <div className="step">2. Pay via UPI / Bank</div>
-          <div className="step">3. Receive USDT instantly</div>
+        <div className="lx-steps">
+          <div className="lx-step">1. Choose Seller</div>
+          <div className="lx-step">2. Pay via UPI</div>
+          <div className="lx-step">3. Get USDT</div>
         </div>
       </section>
 
       {/* SELLERS */}
-      <section className="seller-section">
+      <section className="lx-section">
 
-        {sellers.map((s, i) => (
-          <div className="exchange-card" key={i}>
+        <div className="lx-seller-list">
+          {sellers.map((s, i) => (
+            <div className="lx-card" key={i}>
 
-            <div className="seller-top">
-              <span>{s.name} ✅</span>
-              <span className="tag">{s.tag}</span>
+              <div className="lx-card-top">
+                <span className="lx-seller-name">
+                  {s.name} <span className="lx-verified">✔</span>
+                </span>
+
+                <span className="lx-badge">{s.tag}</span>
+              </div>
+
+              <div className="lx-price-big">₹{s.price}</div>
+
+              <div className="lx-meta">
+                {s.completion}% • {s.orders} orders
+              </div>
+
+              <div className="lx-meta">
+                Available: {s.available} USDT
+              </div>
+
+              <div className="lx-methods">
+                UPI • Bank Transfer
+              </div>
+
+              <button className="lx-btn lx-btn-primary" onClick={handleBuy}>
+                Buy Now
+              </button>
+
             </div>
-
-            <div className="price-big">₹{s.price}</div>
-
-            <div className="seller-info">
-              Available: {s.available} USDT
-            </div>
-
-            <div className="seller-info">
-              {s.completion}% • {s.orders} orders
-            </div>
-
-            <div className="methods">
-              UPI • Bank Transfer
-            </div>
-
-            <button className="primary-btn" onClick={handleBuy}>
-              Buy Now
-            </button>
-
-          </div>
-        ))}
+          ))}
+        </div>
 
       </section>
 
       {/* TRUST */}
-      <section className="trust">
-        <h2>Why Choose IOX?</h2>
+      <section className="lx-section">
+        <h2 className="lx-section-title">Why Choose IOX?</h2>
 
-        <ul>
-          <li>✔ Secure Escrow Protection</li>
-          <li>✔ Verified Sellers Only</li>
-          <li>✔ Instant USDT Transfer</li>
+        <ul className="lx-trust-list">
+          <li>✔ Secure Escrow</li>
+          <li>✔ Verified Sellers</li>
+          <li>✔ Instant Transfer</li>
           <li>✔ 24/7 Support</li>
-          <li>✔ Lowest Price Guarantee</li>
+          <li>✔ Lowest Price</li>
         </ul>
       </section>
 
       {/* VIDEO */}
-      <section className="video">
-        <h2>New to Crypto? Watch This</h2>
-        <p>Learn how to buy USDT safely in 30 seconds</p>
+      <section className="lx-section">
+        <h2 className="lx-section-title">New to Crypto?</h2>
+        <p className="lx-sub">Learn in 30 seconds</p>
 
         <iframe
-          width="100%"
-          height="220"
+          className="lx-video"
           src="https://www.youtube.com/embed/SSo_EIwHSd4"
           title="How to buy USDT"
         />
       </section>
 
       {/* FAQ */}
-      <section className="faq">
-        <h2>FAQ</h2>
+      <section className="lx-section">
+        <h2 className="lx-section-title">FAQ</h2>
 
-        <div className="faq-item">
-          <strong>Is this safe?</strong>
-          <p>Yes, all trades are protected by escrow.</p>
+        <div className="lx-faq">
+          <p><strong>Is this safe?</strong> Yes, escrow protected.</p>
+          <p><strong>Payment?</strong> UPI / Bank Transfer</p>
+          <p><strong>Time?</strong> Within minutes</p>
+          <p><strong>KYC?</strong> Not required for small trades</p>
         </div>
-
-        <div className="faq-item">
-          <strong>How do I pay?</strong>
-          <p>UPI / Bank Transfer</p>
-        </div>
-
-        <div className="faq-item">
-          <strong>When will I receive USDT?</strong>
-          <p>Within minutes after payment</p>
-        </div>
-
-        <div className="faq-item">
-          <strong>Is KYC required?</strong>
-          <p>No KYC required for small transactions.</p>
-        </div>
-
       </section>
 
       {/* STICKY CTA */}
-      <div className="sticky-cta">
+      <div className="lx-sticky">
         <button onClick={handleBuy}>
           Buy USDT at ₹93
         </button>
       </div>
 
-      {/* FOMO POPUP */}
-      {showPopup && (
-        <div className="fomo-popup">
-          🔥 Someone just bought 250 USDT at ₹93
+      {/* TOAST */}
+      {showToast && (
+        <div className="lx-toast">
+          🔥 Someone bought 250 USDT at ₹93
         </div>
       )}
 
-      {/* LOGIN MODAL */}
-      <div id="loginModal" className="modal">
-        <div className="modal-content">
-          <h3>Create account to buy USDT in 10 seconds</h3>
-          <button className="primary-btn">
+      {/* AUTH MODAL */}
+      <div id="lx-auth-modal" className="lx-modal">
+        <div className="lx-modal-box">
+          <h3>Create account in 10 seconds</h3>
+          <button className="lx-btn lx-btn-primary">
             Continue
           </button>
         </div>
