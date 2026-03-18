@@ -180,7 +180,7 @@ export default function LXLanding() {
       <div id="lx-auth-modal" className="lx-modal">
         <div className="lx-modal-box">
           <h3>Create account in 10 seconds</h3>
-          <button className="lx-btn lx-btn-primary">
+          <button className="lx-btn lx-btn-primary" onClick={()=>navigate('/register')}>
             Continue
           </button>
         </div>
