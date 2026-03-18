@@ -18,6 +18,34 @@ export default function UserList() {
     u.mobile.includes(search)
   );
 
+  function formatDate(date){
+
+    const today = new Date();
+    const txDate = new Date(date);
+
+    const diff = Math.floor(
+      (today.setHours(0,0,0,0) - new Date(txDate).setHours(0,0,0,0)) /
+      (1000 * 60 * 60 * 24)
+    );
+
+    const time = txDate.toLocaleTimeString("en-IN", {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true
+    });
+
+    if(diff === 0) return `Today ${time}`;
+    if(diff === 1) return `Yesterday ${time}`;
+
+    const datePart = txDate.toLocaleDateString("en-IN", {
+      day:"2-digit",
+      month:"long",
+      year:"numeric"
+    });
+
+    return `${datePart} ${time}`;
+  }
+
 
   const fetchUsers = async () => {
     try {
@@ -75,14 +103,11 @@ export default function UserList() {
               <tr key={index}>
 
                 <td>
-                  {user.uid}
-
-                  <button
-                    className="copy-btn"
-                    onClick={() => copyText(user.uid)}
-                  >
-                    Copy
-                  </button>
+                  <div>{formatDate(user.createdAt)}</div>
+                  <div>
+                    {user.uid}
+                    <button className="copy-btn" onClick={() => copyText(user.uid)}>Copy</button>
+                  </div>
                 </td>
 
                 <td>
@@ -104,7 +129,7 @@ export default function UserList() {
 
                 <td>
                   <span className={`type ${user.type}`}>
-                    {user.type}
+                    {user.userType}
                   </span>
                 </td>
 
