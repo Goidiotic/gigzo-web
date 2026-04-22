@@ -1,0 +1,36 @@
+/* src/css/gigwork/AppLayout.css */
+
+.gw-layout {
+  display: flex;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.gw-main {
+  flex: 1;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gw-content {
+  margin-top: 60px;
+  padding: 16px;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .gw-main {
+    margin-left: 0;
+  }
+
+  .gw-content {
+    height: calc(100vh - 120px);
+    padding: 14px;
+  }
+
+}

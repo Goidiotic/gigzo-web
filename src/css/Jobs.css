@@ -1,0 +1,38 @@
+/* src/css/gigwork/Jobs.css */
+
+.jobs-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Search */
+
+.jobs-search {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #fff;
+  color: white;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Grid */
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

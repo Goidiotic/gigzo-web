@@ -1,0 +1,67 @@
+/* src/css/TicketCard.css */
+
+.ticket-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  padding: 14px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  transition: 0.2s;
+}
+
+.ticket-card:hover {
+  border-color: #065f46;
+}
+
+/* Ticket ID */
+
+.ticket-id {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Client */
+
+.ticket-client {
+  color: #374151;
+}
+
+/* Meta Row */
+
+.ticket-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  font-size: 13px;
+  color: #374151;
+}
+
+.ticket-type strong,
+.ticket-created strong {
+  margin-left: 4px;
+  color: #111827;
+}
+
+/* Date Time */
+
+.ticket-datetime {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .ticket-meta {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+}

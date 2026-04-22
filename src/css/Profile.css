@@ -1,0 +1,194 @@
+/* src/css/gigzo/Profile.css */
+
+.profile-page {
+  padding: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Profile Card */
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.profile-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.profile-mobile,
+.profile-email {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.profile-status {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+}
+
+.verified {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.unverified {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Payment Section */
+
+.payment-section {
+  margin-top: 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.payment-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px;
+  transition: 0.2s;
+}
+
+.payment-card:hover {
+  border-color: #cbd5f5;
+}
+
+.payment-bank {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.payment-detail {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 2px;
+}
+
+.add-payment-btn {
+  margin-top: 14px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-payment-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Mobile Menu */
+
+.mobile-menu {
+  margin-top: 24px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 10px;
+}
+
+.menu-item {
+  padding: 14px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 15px;
+  color: #111827;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  color: #2563eb;
+}
+
+.logout {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+/* Desktop behavior */
+
+@media (min-width: 768px) {
+
+  .profile-page {
+    padding: 24px;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+}
+
+/* Mobile optimization */
+
+@media (max-width: 480px) {
+
+  .profile-card {
+    padding: 14px;
+  }
+
+  .payment-section {
+    display: none;
+  }
+
+  .profile-avatar {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+
+}

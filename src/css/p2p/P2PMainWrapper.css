@@ -1,9 +1,0 @@
-.iox-p2p-content {
-    padding-top: 102px;
-}
-
-@media (max-width: 768px) {
-    .iox-p2p-content {
-        padding-top: 62px;
-    }
-}

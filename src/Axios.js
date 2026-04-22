@@ -1,19 +1,27 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_URL // Your backend root
+  baseURL: process.env.REACT_APP_API_URL
 });
 
 instance.interceptors.request.use(
-  (config)=>{
+  (config) => {
+
     const token = localStorage.getItem('token');
-    if(token){
+
+    // Authorization Token
+    if (token) {
       config.headers['Authorization'] = `Bearer ${token}`;
     }
 
+    // API Security Headers
+    config.headers['X-api-key'] = process.env.REACT_APP_API_KEY;
+    config.headers['X-salt-key'] = process.env.REACT_APP_SALT_KEY;
+
     return config;
+
   },
-  (error)=>{
+  (error) => {
     return Promise.reject(error);
   }
 );

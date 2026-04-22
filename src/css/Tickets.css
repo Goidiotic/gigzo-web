@@ -1,0 +1,51 @@
+/* src/css/gigwork/Tickets.css */
+
+.tickets-page {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+/* Filters */
+
+.tickets-filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-item {
+  padding: 8px 14px;
+  border-radius: 6px;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  cursor: pointer;
+}
+
+.filter-item.active {
+  background: #065f46;
+  color: white;
+}
+
+/* List */
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .tickets-filters {
+    justify-content: space-between;
+  }
+
+}

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "../Axios2";
+import axios from "../Axios";
 
-import "../css/new/Register.new.css";
+import "../css/Register.new.css";
 import logo from "../icons/logo.png";
 
-import PopupMessage from "../components/PopupMessage";
 import Spinner from "../components/LoadingSpinner";
 
 export default function Register() {
@@ -182,10 +181,6 @@ export default function Register() {
     <div className="exchange-register-wrapper">
 
       {isLoading && <Spinner />}
-      <PopupMessage
-        message={popupMessage}
-        onClose={() => setPopupMessage("")}
-      />
 
       <div className="exchange-register-card">
 

@@ -1,0 +1,67 @@
+/* src/css/gigwork/TopHeader.css */
+
+.gw-header {
+  position: fixed;
+
+  top: 0;
+  left: 240px;
+  right: 0;
+
+  height: 60px;
+
+  background: #1f2937;
+  border-bottom: 1px solid #374151;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 20px;
+
+  z-index: 1000;
+}
+
+.gw-header-left {
+  display: flex;
+  align-items: center;
+}
+
+.gw-page-name {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.gw-mobile-logo {
+  display: none;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gw-logout {
+  color: white;
+  cursor: pointer;
+}
+
+.gw-logout:hover {
+  color: #065f46;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .gw-header {
+    left: 0;
+  }
+
+  .gw-page-name {
+    display: none;
+  }
+
+  .gw-mobile-logo {
+    display: block;
+  }
+
+}

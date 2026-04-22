@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import '../css/Global.css';
-import '../css/new/Login.new.css'
+import '../css/Login.new.css'
 import logo from '../icons/logo.png';
 import { Link, useNavigate } from 'react-router-dom';
-import axios2  from "../Axios2"
+import axios  from "../Axios"
 import Spinner from '../components/LoadingSpinner';
-import PopupMessage from '../components/PopupMessage';
 
 export default function Login() {
 
@@ -21,7 +19,7 @@ export default function Login() {
     //1. Mobile Number Check
     const mobileRegex = /^[0-9]{10}$/;
     if(!mobileRegex.test(mobile)){
-      setPopupMessage("Please enter a valid mobile number.");
+      
       return false;
     }
 
@@ -42,13 +40,13 @@ export default function Login() {
 
       //console.log(data);
 
-      const res = await axios2.post('/web/public/login', payload);
+      const res = await axios.post('/web/public/login', payload);
 
       if(res.data.statusCode === 1000){
         setIsLoading(false);
         setMobile("");
         setPassword("");
-        setPopupMessage("Login success.");
+        
 
         setTimeout(() => {
 
@@ -60,12 +58,12 @@ export default function Login() {
       }else {
         setIsLoading(false);
         setPassword("");
-        setPopupMessage("We are unable to precess your request. 001");
+        
       }
 
     }catch(err){
       setIsLoading(false);
-      setPopupMessage("Sorry, we are unable to precess your request.");
+      
     }
 
   }
@@ -75,7 +73,7 @@ export default function Login() {
     const token = localStorage.getItem('token');
 
     if(token) {
-      navigate("/p2p-market");
+      navigate("/");
     }
 
   }, [navigate])
@@ -85,7 +83,7 @@ return (
     {(isLoading) && (
       <Spinner/>
     )}
-    <PopupMessage message={popupMessage} onClose={()=>{setPopupMessage('')}} />
+    
     <div className="exchange-login-wrapper">
       <div className="exchange-login-card">
 

@@ -1,135 +1,155 @@
-import React, { useEffect, useState } from "react";
-import "../css/new/Profile.css";
-import { getMobile, getUID } from "../utils/authUser";
-import TopMenuCommon from "../components/new/TopCommonMenu";
-import axios from "../Axios2";
-import { useNavigate } from "react-router-dom";
+// src/pages/gigzo/Profile.jsx
+
+import React from "react";
+import AppLayout from "./layout/AppLayout";
+import "../css/Profile.css";
+
+import {
+  getAllBankAccounts
+} from "../data/BankAccountsStore";
+
+const payments = getAllBankAccounts();
+
+
 
 export default function Profile() {
 
-  const navigate = useNavigate();
+  // Replace with API user data
 
-  const mobile = getMobile();
-  const uid = getUID();
-
-  const [inrBalance, setInrBalance] = useState(0);
-  const [usdtBalance, setUsdtBalance] = useState(0.00);
-
-  const firstLetter = mobile ? mobile[0] : "U";
-
-  const isVerified = false; // 🔥 replace with real data
-
-      // Get Wallet Balance
-  const getWalletBalance = async () => {
-    try {
-
-      const res = await axios.post('web/private/get-wallet-balance');
-
-      if(res.data.statusCode === 1000) {
-          setInrBalance(res.data.data.inrBalance);
-          setUsdtBalance(res.data.data.usdtBalance);
-      } else {
-        console.log(res.data.message);
-      }
-
-    } catch (error) {
-      console.log(error.message);
-    }
+  const user = {
+    name: "Nazrul Hoque",
+    mobile: "+91 8638539647",
+    email: "nazruliqo@gmail.com",
+    verified: true
   };
 
-  const logout = ()=> {
-    localStorage.removeItem("token");
-    navigate("/login");
-  }
+  // Replace with API payment methods
 
-    useEffect(()=>{
-      getWalletBalance();
-    }, []);
+    
+
+  const firstLetter = user.name.charAt(0).toUpperCase();
 
   return (
-    <>
-    <TopMenuCommon/>
-      <div className="profile-wrapper">
 
-        {/* 🔹 Top Profile Card */}
+    <AppLayout pageName="Profile">
+
+      <div className="profile-page">
+
+        {/* Profile Header */}
+
         <div className="profile-card">
 
-          <div className="profile-left">
-            <div className="profile-avatar">
-              P
+          <div className="profile-avatar">
+            {firstLetter}
+          </div>
+
+          <div className="profile-info">
+
+            <div className="profile-name">
+              {user.name}
             </div>
-          </div>
 
-          <div className="profile-right">
-            <div className="profile-mobile">{mobile}</div>
-            <div className="profile-uid">UID: {uid}</div>
-
-            <div className={`profile-verify ${isVerified ? "verified" : "not-verified"}`}>
-              {isVerified ? "✔ Verified" : "Not Verified"}
+            <div className="profile-mobile">
+              {user.mobile}
             </div>
+
+            <div className="profile-email">
+              {user.email}
+            </div>
+
+            <div
+              className={`profile-status ${
+                user.verified
+                  ? "verified"
+                  : "unverified"
+              }`}
+            >
+              {user.verified
+                ? "Verified"
+                : "Not Verified"}
+            </div>
+
           </div>
 
         </div>
 
-        {/* 🔹 Wallet Cards */}
-        <div className="wallet-grid">
+        {/* Payment Methods */}
 
-          <div className="wallet-card">
-            <div className="wallet-title">INR Wallet</div>
-            <span>₹{(inrBalance).toFixed(2)}</span>
+        <div className="payment-section">
+
+          <div className="section-title">
+            Payment Methods
           </div>
 
-          <div className="wallet-card">
-            <div className="wallet-title">Crypto Wallet</div>
-            <span>${(usdtBalance).toFixed(2)} USDT</span>
+          <div className="payment-grid">
+
+            {payments.map((p) => (
+
+              <div
+                key={p.id}
+                className="payment-card"
+              >
+                <div className="payment-detail">
+                  Bank Name: {p.bankName}
+                </div>
+                <div className="payment-bank">
+                  {p.bank}
+                </div>
+
+                <div className="payment-detail">
+                  Account: {p.accountNumber}
+                </div>
+
+                <div className="payment-detail">
+                  IFSC: {p.ifsc}
+                </div>
+
+              </div>
+
+            ))}
+
           </div>
 
+          <button className="add-payment-btn">
+            + Add New Payment Method
+          </button>
+
         </div>
 
-        {/* 🔹 Menu Sections */}
+        {/* Mobile Menus */}
 
-        {/* P2P */}
-        <div className="menu-section">
-          <div className="menu-title">P2P</div>
+        <div className="mobile-menu">
 
-          <div className="menu-item" onClick={()=>navigate('/p2p-market')}>P2P Market</div>
-          <div className="menu-item" onClick={()=>navigate('/p2p/order-list')}>Orders</div>
-          <div className="menu-item" onClick={()=>navigate('/p2p/p2p-wallet')}>Wallet</div>
-        </div>
+          <div className="menu-item">
+            Payout Methods
+          </div>
 
-        {/* Exchange */}
-        <div className="menu-section">
-          <div className="menu-title">Exchange</div>
+          <div className="menu-item">
+            FAQs
+          </div>
 
-          <div className="menu-item" onClick={()=>navigate('/exchage-currency')}>Swap</div>
-          <div className="menu-item" onClick={()=>navigate('/transaction-history')}>Transactions</div>
-          <div className="menu-item" onClick={()=>navigate('/wallet')}>Wallet</div>
-          <div className="menu-item" onClick={()=>navigate('/deposit-inr')}>Deposit INR</div>
-        </div>
+          <div className="menu-item">
+            Support
+          </div>
 
-        {/* Common */}
-        <div className="menu-section">
-          <div className="menu-title">Common</div>
+          <div className="menu-item">
+            Privacy Policy
+          </div>
 
-          <div className="menu-item">Send Crypto</div>
-          <div className="menu-item">Receive Crypto</div>
-        </div>
+          <div className="menu-item">
+            Terms and Conditions
+          </div>
 
-        {/* Others */}
-        <div className="menu-section">
-          <div className="menu-title">Others</div>
+          <div className="menu-item logout">
+            Logout
+          </div>
 
-          <div className="menu-item">Privacy Policy</div>
-          <div className="menu-item">Terms & Conditions</div>
-          <div className="menu-item">Disclaimer</div>
-        </div>
-
-        {/* Logout */}
-        <div className="logout-btn" onClick={logout}>
-          Logout
         </div>
 
       </div>
-    </>
+
+    </AppLayout>
+
   );
+
 }

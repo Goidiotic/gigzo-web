@@ -1,0 +1,104 @@
+/* src/css/gigwork/ChatItem.css */
+
+.chat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 12px;
+
+  border-bottom: 1px solid #e5e7eb;
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.chat-item:hover {
+  background: #f9fafb;
+}
+
+/* Avatar */
+
+.chat-avatar {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  background: #065f46;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+/* Content */
+
+.chat-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chat-name {
+  font-weight: 600;
+  color: #111827;
+}
+
+.chat-time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Message */
+
+.chat-message {
+  font-size: 13px;
+  color: #6b7280;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Unread Badge */
+
+.chat-unread {
+  background: #065f46;
+  color: white;
+
+  min-width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .chat-avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+}

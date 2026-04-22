@@ -1,0 +1,104 @@
+/* src/css/gigwork/ClientCard.css */
+
+.client-row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr 1.5fr;
+
+  background: #fff;
+  border: 1px solid #374151;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
+  gap: 12px;
+}
+
+.client-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Profile */
+
+.client-profile {
+  display: flex;
+  gap: 12px;
+}
+
+.client-avatar {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #065f46;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+.client-name {
+  color: #111827;
+  font-weight: 600;
+}
+
+.client-location {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.client-verified {
+  color: #16a34a;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Buttons */
+
+.message-btn,
+.request-btn,
+.ticket-btn {
+  background: #065f46;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.ticket-btn {
+  background: #111827;
+  border: 1px solid #374151;
+}
+
+.project-title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.project-details {
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .client-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .client-col {
+    border-bottom: 1px solid #e7e9ed;
+    padding-bottom: 10px;
+  }
+
+}
